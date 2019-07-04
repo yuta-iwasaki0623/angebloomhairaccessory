@@ -1,0 +1,231 @@
+﻿@charset "utf-8";
+
+// 文字サイズベース
+$font-size-R: 14px !default;
+$font-size-S: 12px !default;
+$font-size-L: 16px !default;
+// 色
+$color_bace: #111;
+$color_accent: #FF8010;
+// 背景色ベース
+$background: darken(#FEFDFB, 2%);
+// 背景色ベース2
+$background_base2: #F7F4D7;
+// 入力フォームの高さ
+$form_height: 48px;
+@import "sp_common";
+
+
+/* CSS Document */
+
+/*------------------------------------*
+    $ CONTENTS
+ *------------------------------------*/
+/**
+ * CONTENTS .........目次
+ * Mixin ............ミックスイン
+ * Variable .........変数
+ * Reset ............デフォルトの設定
+ * Elements .........クラス名の無いエレメント群
+ * Objects ..........汎用的なデザインのパターン
+ * Components .......オブジェクトで構成された部品群
+ * Override .........cssプラグインのオーバーライド
+ * Style trumps .....エラー状態など
+ */
+
+/*------------------------------------*
+    $ Mixin
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Variable
+ *------------------------------------*/
+
+$color_green: #006633;
+
+/*------------------------------------*
+    $ Reset
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Elements
+ *------------------------------------*/
+
+// 各section単位のタイトル
+.section h2 {
+  font-weight: normal;
+  color: #fff;
+  line-height: 200%;
+  margin: 16px 1px 8px;
+  background: $color_green;
+  border-radius: 40px;
+  text-align: center;
+}
+
+// 共通のinput装飾
+input[type=text] {
+  @include border(1px,lighten($color_bace, 10%),4px);
+  margin-right: 2px;
+}
+
+/*------------------------------------*
+    $ Objects
+*------------------------------------*/
+
+/*------------------------------------*
+    $ Components
+ *------------------------------------*/
+
+/* ヘッダーナビ
+--------------------------------------*/
+#headNav {
+  // ハンバーガーの枠線無し
+  .drawer-toggle {
+    border: none;
+    box-shadow: none;
+  }
+}
+
+/* 検索まど
+--------------------------------------*/
+#searchBox.section {
+  background: none;
+  margin: 24px 0;
+  // 検索まどのinput
+  .searchBox_input form{
+    input[type="submit"] {
+      background: linear-gradient(lighten($color_accent, 10%), darken($color_accent, 10%));
+      color: #fff;
+    }
+  }
+  // 検索ボックス内の検索キーワード
+  .searchBox_keyword {
+    li {
+      font-size: $font-size-R;
+      color: $color_accent;
+      background: #fff;
+      border: 1px solid darken($background_base2, 10%);
+      border-radius: 4px;
+      a {
+        padding: 6px 8px;
+      }
+    }
+  }
+}
+
+/* おすすめ商品
+--------------------------------------*/
+#itemRecommend {
+  .item_thum {
+    padding: 4px;
+  }
+  .item_name {
+    font-size: $font-size-R;
+  }
+}
+
+/* イベント・特集情報
+--------------------------------------*/
+// バナー一覧部
+.event_bannerWrapper {
+  margin: 16px 0;
+}
+
+/* カテゴリーから探す
+--------------------------------------*/
+#category {
+  margin-bottom: 16px;
+  .category_itemWrapper {
+    margin-top: 0;
+  }
+  // 1階層目
+  .node1 {
+    color: $color_accent;
+    background: $background_base2;
+    border-bottom: 1px solid darken($background_base2, 10%);
+    a:after {
+      background: $color_accent;
+      color: rgba(#fff,.9);
+      font-size: 12px;
+    }
+    &.active a:after {
+      background: $color_green;
+      color: #fff;
+    }
+  }
+  // 2階層目/3階層目
+  .node2,
+  .node3 {
+    border-color: rgba(#000,.1) !important;
+    color: $color_bace;
+  }
+  .node2 {
+    background: #F3F2E9;
+    a:before {
+      content: none;
+    }
+  }
+  .node3 {
+    background: #fff;
+    a:before {
+      content: "・";
+      color: $color_accent;
+    }
+  }
+}
+
+/* お買い物ガイド
+--------------------------------------*/
+#shoppingGuide {
+  background: $background;
+  li {
+    background: #fff;
+    border: 2px solid darken($background, 10%);
+    &:before {
+      // font-size: 14px;
+      color: $color_accent !important;
+    }
+  }
+  .shoppingGuide_info {
+    margin: 16px 8px;
+    background: $background_base2;
+    padding: 8px;
+    border: 2px solid darken($background_base2, 5%);
+  }
+}
+
+/* フッター
+--------------------------------------*/
+#footer {
+  background: $color_green;
+  color: rgba(#fff,.7);
+}
+
+/* ドロワーナビゲーション
+--------------------------------------*/
+.drawer-nav {
+  #shoppingGuide {
+    background: none;
+    li {
+      background: $background;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* 「上へ」ナビゲーション
+--------------------------------------*/
+.anchor_top a {
+  // background: #F3F2E9;
+  // color: $background;
+}
+
+/*------------------------------------*
+    $ Override
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Style trumps
+ *------------------------------------*/

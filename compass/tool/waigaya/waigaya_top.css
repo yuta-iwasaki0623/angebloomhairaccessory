@@ -1,0 +1,114 @@
+body {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+}
+#time {
+    font-size: 18px;
+    position: absolute;
+    width: 300px;
+    height:20px;
+    right: 1px;
+    top: 79px;
+    color: #FFFFFF;
+}
+#json_name {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    width: 0px;
+    height: 0px;
+}
+#waigaya_header {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    height: 110px;
+    margin: auto;
+}
+#waigaya_header > img {
+    height: 110px;
+}
+#waigaya_logo {
+    height: 40px;
+    float: right;
+}
+#waigaya {
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background-color: #FFFFFF;
+    margin: auto;
+}
+#waigaya div {
+    position: relative;
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    height: 60px;
+    font-size: 11.5px;
+}
+#waigaya div.review span, #waigaya div.shop_review span {
+    position: absolute;
+    text-align: left;
+    left: 75px;
+    top: 27px;
+}
+#waigaya div span {
+    position: absolute;
+    text-align: left;
+    left: 75px;
+    top: 10px;
+    word-break: break-all;
+    width: #item_width;
+}
+#waigaya div img {
+    position: absolute;
+    text-align: left;
+    width : 48px;
+    height : 48px;
+    left: 7px;
+    top: 6px;
+}
+#waigaya div img.label {
+    position: absolute;
+    left: 100px;
+    top: 20px;
+    width : 200px;
+    height : 20px;
+}
+.shop_info {
+    background-image: url("./theme_top/shop_info.jpg");
+    background-repeat: no-repeat;
+}
+.price_info {
+    background-image: url("./theme_top/price_info.jpg");
+    background-repeat: no-repeat;
+}
+.delivery_info {
+    background-image: url("./theme_top/delivery_info.jpg");
+    background-repeat: no-repeat;
+}
+.point_info {
+    background-image: url("./theme_top/point_info.jpg");
+    background-repeat: no-repeat;
+}
+.customer_info {
+    background-image: url("./theme_top/customer_info.jpg");
+    background-repeat: no-repeat;
+}
+.item {
+    background-image: url("./theme_top/item.jpg");
+    background-repeat: no-repeat;
+}
+.hover {
+    opacity: 0.6;
+    filter: alpha(opacity=60);
+    -ms-filter:"alpha(opacity=60)";
+    -moz-opacity: 0.6;
+    cursor: pointer;
+}
+#powered_by {
+    font-size: 10px
+}

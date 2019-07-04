@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+/*---------------------------------------------
+  iframe用
+----------------------------------------------*/
+iframe#shop_header {
+  width: 960px;
+  height: 1136px;
+}
+
+iframe#shop_left {
+  width: 200px;
+  height: 3963px;
+}
+
+iframe#shop_top {
+  width: 728px;
+  height: 2605px;
+}
+
+iframe#shop_footer {
+  width: 960px;
+  height: 1100px;
+}
+
+iframe#item_bottom {
+  width: 728px;
+  height: 0px;
+}
+
+/*---------------------------------------------
+  縦帯バナー表示用
+----------------------------------------------*/
+body:not(.shops-preview),
+body.shops-preview #preview-cont {
+  background-image: url('');
+  background-repeat: repeat-y;
+  background-attachment: scroll;
+  background-position: left top;
+}
+
+@media screen and (max-width: 1220px) {
+  body:not(.shops-preview),
+  body.shops-preview #preview-cont {
+    background: none;
+  }
+}
+
+/*---------------------------------------------
+  背景色用
+----------------------------------------------*/
+body:not(.shops-preview),
+body.shops-preview #preview-cont {
+  background-color: transparent;
+}
+
+/*---------------------------------------------
+  item-cont1,2用
+----------------------------------------------*/
+#item-cont1,
+#item-cont2 {
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic";
+  letter-spacing: 0.02em;
+
+  div,p,ul,li,h1,h2,h3,h4,h5 {
+    margin:0;
+    padding:0;
+  }
+
+  ul,ol,li {
+    list-style: none;
+  }
+
+  a {
+    text-decoration: none;
+    color: inherit;
+
+      &:hover,
+      &:focus {
+        text-decoration: underline;
+        transition: all .2s ease-in-out;
+        -webkit-transition: all .2s ease-in-out;
+        -moz-transition: all .2s ease-in-out;
+      }
+
+      & img {
+       border: none;
+      }
+
+      & img:hover {
+        opacity:0.8;
+        filter:alpha(opacity=80);
+        -ms-filter: "alpha( opacity=80 )";
+        transition: all .1s ease-in-out;
+        -webkit-transition: all .1s ease-in-out;
+        -moz-transition: all .1s ease-in-out;
+      }
+  }
+}
+
+/*---------------------------------------------
+  item-cont1用
+----------------------------------------------*/
+#item-cont1 {
+  width:728px;
+  max-width:728px;
+  overflow:hidden;
+  margin:22px 20px 0 0;
+  background: #f0f0f0 top left none;
+
+    & > div {
+      width:100%;
+      margin-bottom:16px;
+      }
+
+    .title-box {
+      height: 100%;
+      margin: 0;
+
+        .title-img {
+          width: 100%;
+          border: 2px solid #ddd;
+
+          & img {
+            width: 100%;
+            border: none;
+          }
+        }
+
+        .text-area {
+          width: 100%;
+          background: url(../img/itembg-salescopy.png) top left repeat;
+          padding: 32px 0;
+          margin: 0;
+          border-top-left-radius: 8px;
+          border-top-right-radius: 8px;
+
+            p {
+              padding: 0 16px 8px 80px;
+              font-size: 12px;
+              color: #fff;
+              text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+              letter-spacing: .05em;
+            }
+            h2 {
+              padding: 0 16px 0 80px;
+              font-size: 20px;
+              font-weight: normal;
+              color: #fff;
+              text-align: left;
+              text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
+              letter-spacing: .05em;
+            }
+        }
+      }
+
+    .apeal-box {
+      height: 320px;
+      width: auto;
+      text-align: left;
+      background: url(../img/itembg-apeal.jpg) no-repeat top left;
+
+        ul {
+          padding-top: 78px;
+        }
+
+        li {
+          font-size: 16px;
+          padding: 0 0 0 48px;
+          margin: 38px;
+          color: #333;
+        }
+
+    }
+
+    hr {
+      margin: 0 16px 40px;
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .contents-box {
+      width: auto;
+      padding: 32px;
+      border-bottom-left-radius: 5px;
+      border-bottom-right-radius: 5px;
+
+        & > div {
+          margin: 0 0 16px 0;
+          background: #fff;
+          }
+
+        .osusume {
+          text-align: left;
+
+            & img {
+              width: 100%;
+              border: none;
+            }
+
+            ul {
+              width: 100%;
+              margin: 0;
+              padding: 80px 0 16px;
+              background: url(../img/itembg-osusume.png) no-repeat top left;
+              border-bottom-left-radius: 5px;
+              border-bottom-right-radius: 5px;
+            }
+
+            li {
+              font-size: 18px;
+              padding: 0 0 0 40px;
+              margin: 18px 16px;
+              color: #fff;
+            }
+          }
+        .message {
+          height: auto;
+          background: #fff url(../img/item-message.png) top left no-repeat ;
+          padding: 32px;
+          margin: 40px 0;
+          border-radius: 5px;
+          box-shadow: 0 0 8px #ddd;
+
+            p {
+              padding-top: 40px;
+              font-size: 14px;
+              color: #555;
+              text-align: left;
+              line-height: 1.8em;
+            }
+        }
+        .waigaya {
+          height: 410px;
+          margin: 32px 0 16px -16px;
+          }
+      }
+  }
+
+/*---------------------------------------------
+  item-cont2
+----------------------------------------------*/
+#item-cont2 {
+  width:496px;
+  max-width:728px;
+  overflow:hidden;
+  margin:16px 0;
+
+    & > div {
+      width:100%;
+      margin-bottom:16px;
+      }
+
+    .info-box {
+      width: 100%;
+      padding: 0;
+      background: url(../img/bg-gray.png);
+
+        table {
+          width: 100%;
+          border: 0;
+        }
+
+        td {
+          background: #fff;
+        }
+
+        .doroyo {
+          width: 200px;
+          height:120px;
+        }
+
+        .merumaga {
+          width: 232px;
+          height: 120px;
+        }
+
+        .qr {
+          width: 464px;
+          height: 150px;
+        }
+    }
+
+    .spec-box {
+
+      table {
+        font-size: 12px;
+        color: #333;
+        line-height: 1.4em;
+        width: 100%;
+        border: 1px solid #ccc;
+        border-collapse: collapse;
+
+
+         th {
+            height: 30px;
+            border: 1px solid #ccc;
+            background: #eee;
+            font-weight: normal;
+            background: -moz-linear-gradient(top, rgba(255,255,255,1) 0%, rgba(248,248,248,1) 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,1)), color-stop(100%,rgba(248,248,248,1)));
+            filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#f8f8f8',GradientType=0);
+          }
+
+
+          td {
+            width: 70%;
+            padding: 8px;
+            border: 1px solid #ccc;
+          }
+      }
+
+    }
+
+}
+
+/*---------------------------------------------
+  会社概要用
+----------------------------------------------*/
+// 会社概要ページにコンパスのヘッダーを設置した場合の表示崩れ対処
+.companyInfoPC {
+  padding-left: 120px; //左側の縦帯バナーと会社概要情報が被るのを防ぐ
+}
+.companyInfoSP #shop_header {
+    display: none; //スマホの会社概要からはヘッダー非表示
+}

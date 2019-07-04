@@ -1,0 +1,1013 @@
+@charset "utf-8";
+
+/*---------------------------------------------
+  rakuten
+----------------------------------------------*/
+td.lossleader_item_name {
+  word-break: break-all;
+}
+
+/*---------------------------------------------
+  kikaku
+----------------------------------------------*/
+#header {
+  .kikaku-box {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+
+    #start {
+      position: absolute;
+      width: 230px;
+      right: 230px;
+      bottom: 1px;
+    }
+
+    #wave {
+      position: absolute;
+      width: 50px;
+      right: 197px;
+      bottom: 1px;
+    }
+
+    #end {
+      position: absolute;
+      width: 230px;
+      right: -10px;
+      bottom: 1px;
+    }
+  }
+}
+
+#item-bottom {
+  .kikaku-box {
+    width: 100%;
+    height: 160px;
+    position: relative;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+
+    #start {
+      position: absolute;
+      width: 200px;
+      right: 240px;
+      bottom: 3px;
+    }
+
+    #wave {
+      position: absolute;
+      width: 40px;
+      right: 200px;
+      bottom: 3px;
+    }
+
+    #end {
+      position: absolute;
+      width: 200px;
+      right: 10px;
+      bottom: 3px;
+    }
+  }
+}
+
+/*---------------------------------------------
+  base
+----------------------------------------------*/
+
+html,body{
+  margin: 0;
+  padding: 0;
+}
+
+
+div,p,ul,li,h1,h2,h3,h4,h5 {
+  margin: 0;
+  padding: 0;
+}
+
+ul,ol,li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover,
+  &:focus {
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+  }
+
+  & img {
+   border: none;
+  }
+
+  & img:hover {
+    opacity:0.8;
+    filter:alpha(opacity=80);
+    -ms-filter: "alpha( opacity=80 )";
+    transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+  }
+}
+
+// フリースペースの中身をリセット
+div.free_space {
+  font-family: initial;
+  letter-spacing: initial;
+  line-height: 1.4em; //ブラウザによる行間変化防止
+
+    div,p,ul,li,h1,h2,h3,h4,h5 {
+      margin: initial;
+      padding: initial;
+    }
+    a {
+      display: initial;
+      text-decoration: initial;
+      color: initial;
+    }
+}
+
+// テキスト要素の中央構え
+@mixin text-centering {
+  display:table-cell;
+  text-align:center;
+  vertical-align:middle;
+  padding:0 10px;
+  word-break: break-all;
+}
+
+
+/*---------------------------------------------
+  header
+----------------------------------------------*/
+#header {
+  width:960px;
+  max-width:960px;
+  overflow:hidden;
+  margin:0 20px 0 0;
+
+  & > div {
+    width:100%;
+    min-width:100%;
+    margin-bottom:16px;
+    overflow:hidden;
+  }
+
+  /*看板画像(大)*/
+  .kanban-large {
+    text-align: center;
+    img {
+      max-width:100%;
+    }
+  }
+
+  /*看板画像(小)*/
+  @mixin kanban-small-size {
+    max-width: 480px;
+    max-height: 64px;
+  }
+
+  .kanban-small {
+    @include kanban-small-size;
+    text-align: left;
+    position: relative;
+
+    .bnr-wrap {
+      float: left;
+      @include kanban-small-size;
+
+      img {
+        @include kanban-small-size;
+      }
+    }
+
+    .text-wrap {
+      box-sizing: border-box;
+      @include kanban-small-size;
+      @include text-centering;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      span {
+        display: inline-block;
+        padding: 1px 4px;
+        margin: 0 4px 0 8px;
+      }
+    }
+  }
+
+  /*看板画像(画像無し)*/
+  .shopname-area {
+    width: 100%;
+    height: 56px;
+
+    h1.shopname {
+      margin: 0;
+      float: left;
+      margin-right: 16px;
+    }
+
+    .eigyou {
+      float: right;
+      position: relative;
+
+      img {
+        position: absolute;
+        left: -4px;
+      }
+
+      span {
+        display: inline-block;
+        padding: 1px 4px;
+        margin: 0 4px 0 8px;
+      }
+    }
+  }
+
+  /*ナビ(大)*/
+  .nav-big {
+    width: 960px;
+    overflow: hidden;
+    ul {
+      width: 100%;
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+    }
+    li {
+      // 親要素にflexかかっているが、レガシーなブラウザへの対処としてfloatも残しておく
+      float: left;
+      margin: 0 0 0 2px;
+      a {
+        box-sizing: border-box;
+        @include text-centering;
+        width: 158px;
+        height: 64px;
+      }
+    }
+    li:first-child {
+      margin-left: 0 !important;
+    }
+  }
+
+  /*ナビ(中)*/
+  .nav-middle {
+    box-sizing: border-box;
+    width: 960px;
+    padding: 0 16px;
+    height: 64px;
+    .left {
+      float: left;
+      .inner {
+        @include text-centering;
+        width: 570px;
+        height: 64px;
+        padding: 0;
+        ul {
+          width: 100%;
+          margin: 0;
+        }
+        li {
+          float: left;
+          margin: 0;
+          border-left: 1px solid #ccc;
+          &:first-child {
+            border:none;
+          }
+          a {
+            @include text-centering;
+            min-width: 72px;
+            padding: 0 8px;
+          }
+        }
+      }
+    }
+    iframe {
+      float:right;
+      width:304px;
+      height:64px;
+      margin:0;
+      padding:0;
+    }
+  }
+
+  /*ナビ(小)*/
+  .nav-small {
+    .nav {
+      width:100%;
+      height: 24px;
+      clear: both;
+      position: relative;
+
+      ul {
+        position: absolute;
+        padding: 4px 0;
+      }
+
+      li {
+        line-height: 14px;
+        height: 14px;
+        float: left;
+        margin: 0 6px;
+        padding: 0 12px 0 0;
+
+        &:first-child {
+          margin-left:0;
+        }
+
+        &:last-child {
+          border: none;
+        }
+        & a {
+          line-height: 1em;
+        }
+
+        img {
+          width: 14px;
+          height: 14px;
+          margin: 0 4px;
+          display: block;
+          float: left;
+        }
+        }
+    }
+  }
+
+    .search-box {
+      width: 100%;
+      height: 64px;
+      position: relative;
+      clear: both;
+      overflow: hidden;
+
+        .search-area {
+          font-size: 12px;
+          width: 440px;
+          float: left;
+          padding: 4px 4px 0;
+
+          iframe {
+            width: 100%;
+            height: 56px;
+            border: none;
+            margin: 0;
+            padding: 0;
+          }
+        }
+        .souryo {
+          max-width: 520px;
+          height: 52px;
+          float: right;
+          padding: 8px 0 0;
+            p.icon {
+              width: 63px;
+              height: 51px;
+            }
+            p {
+              line-height: 1.4em;
+            }
+        }
+    }
+
+
+  /*カテゴリ(大)*/
+  .category-big {
+    width: 100%;
+    ul {
+      overflow: hidden;
+      margin: 0 0.5px 0 0;
+    }
+    li {
+      width: 33%;
+      height: 64px;
+      overflow: hidden;
+      // 親要素にflexが指定されているが、レガシーなブラウザの為にfloatも残しておく。
+      float: left;
+      margin: 0 4px 4px 0;
+      &:nth-of-type(3),
+      &:nth-of-type(6) {
+        margin-right: 0;
+      }
+      a {
+        width: 100%;
+        height: 100%;
+        box-sizing: border-box;
+        // flexが適用されなかった場合の予備
+        display: block;
+        text-align: center;
+        // flexで上下左右中央寄せ
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+
+  /*カテゴリ(小)*/
+  .category-small {
+    box-sizing: border-box;
+    width: 100%;
+    height: 64px;
+    padding: 0 24px;
+
+    ul {
+      @include text-centering;
+      width: 936px;
+      height: 64px;
+      padding: 0;
+      margin: 0 auto;
+    }
+    li {
+      display: inline-block;
+      margin: 4px 0;
+      max-height: 64px;
+      overflow: hidden;
+
+      &:first-child {
+        border: none;
+      }
+      a {
+        @include text-centering;
+        min-width: 128px;
+        box-sizing: border-box;
+      }
+    }
+  }
+
+  /*バナー*/
+  .banners {
+    .slidebanner {
+      float: left;
+      width: 468px;
+      height: 120px;
+      margin-bottom: 5px;
+      margin-right: 16px;
+    }
+    .banner-box {
+      width: 474px;
+      height: 120px;
+      float: left;
+      margin-bottom: 5px;
+      text-align: center;
+      a {
+        width: 100%;
+        height: 100%;
+      }
+      img {
+        max-width: 100%;
+        max-height: 100%;
+        vertical-align: top;
+      }
+      &.left {
+        margin-right: 10px;
+      }
+    }
+  }
+
+  /*売れ筋ランキング*/
+  .item-box {
+    height: 310px;
+    width: 100%;
+  }
+
+  /*フリースペース*/
+  .free_space {
+      img {
+        max-width: 100%
+      }
+  }
+}
+
+/*---------------------------------------------
+  iframe search
+----------------------------------------------*/
+#header {
+  .search-box {
+    .search-area {
+
+      .icon {
+        display: inline-block;
+        float: left;
+        margin: 8px 0;
+      }
+
+      input {
+        height: 24px;
+        line-height: 24px;
+        border-radius: 1px;
+        -webkit-border-radius: 1px;
+        -moz-border-radius: 1px;
+      }
+
+      .yen {
+        width: 50px;
+        margin-right: 2px;
+      }
+
+      .searchBtn {
+        height: 30px;
+        position: relative;
+        top: 11px;
+        left: -4px;
+        z-index: 1;
+        cursor: pointer;
+      }
+    }
+    .submit {
+      float: left;
+    }
+  }
+
+  .nav-search {
+    .search-area {
+      input {
+        float: left;
+      }
+      .searchBtn {
+        top: 0 !important;
+        left: -1px !important;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+
+
+/*---------------------------------------------
+  left
+----------------------------------------------*/
+
+#left {
+  width:200px;
+  max-width:200px;
+  overflow:hidden;
+  margin:0 12px 0 0;
+
+  & > div {
+    width:100%;
+    margin-bottom:16px;
+    .titleImg {
+      width: 200px;
+      height: 45px;
+    }
+  }
+
+  /*毎日元気に営業中*/
+  .koushin {
+    height:40px;
+  }
+
+  /*売れ筋トップ3*/
+  .item-box {
+    height:570px;
+  }
+
+  /*バナー*/
+  .banner-box {
+    height: auto;
+    text-align: center;
+    a,img {
+      max-width: 100%;
+      max-height: 200px;
+      vertical-align: top;
+    }
+  }
+
+  /*検索窓*/
+  .search-box {
+    padding-bottom: 16px;
+    margin-bottom: 0;
+
+    .search-table {
+      width: 100%;
+
+      iframe {
+        width: 100%;
+        height: 44px;
+        border: none;
+        margin: 0;
+        padding: 0;
+      }
+
+      .input-form {
+        font-size: 12px;
+        padding: 6px;
+        text-align: left;
+        width: 130px;
+      }
+
+      td > input {
+        padding: 0;
+      }
+    }
+    hr {
+      margin: 24px 8px 8px;
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+  }
+
+  /*価格帯検索*/
+  .price-search-box {
+    h3 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+
+    .price-table {
+      li {
+        text-align: left;
+        padding: 4px 0;
+
+        &:first-child {
+          border-top: none;
+        }
+
+        & a {
+          padding-left: 24px;
+          font-weight: 700;
+          span {
+            font-weight: 700;
+            font-size: 10px;
+            letter-spacing: -0.5px;
+          }
+        }
+      }
+    }
+  }
+
+  /*カテゴリ*/
+  .category-box {
+    padding-bottom: 16px;
+    * {
+      box-sizing: border-box;
+    }
+    li {
+      font-size: 14px;
+      margin: 0;
+      border-top: 1px dotted #ddd;
+      line-height: 1em;
+
+      &.large-category {
+        padding: 16px 4px 16px 28px;
+      }
+      &.medium-category {
+        font-size: 12px;
+        padding: 12px 4px 12px 40px;
+      }
+      &.small-category {
+        font-size: 12px;
+        padding: 12px 4px 12px 60px;
+      }
+      &:first-child {
+        border-top: none;
+      }
+    }
+    a {
+      display: block;
+      width: 100%;
+    }
+  }
+
+  /*お届けについて*/
+  .doroyo-box {
+    padding-bottom: 16px;
+
+    $margin: 8px;
+
+    hr {
+      margin: 8px $margin 24px;
+      border: 0;
+      height: 0;
+      border-top: 1px solid rgba(0, 0, 0, 0.1);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .icon {
+      text-align: center;
+      margin-bottom: $margin;
+    }
+
+    .info-box {
+      padding: 12px;
+
+      h3 {
+        font-size: 14px;
+        font-weight: 700;
+        text-align: center;
+        margin-bottom: $margin;
+      }
+    }
+  }
+
+  /*QRコード*/
+  .qr-box {
+    height:120px;
+  }
+
+  /*カレンダー*/
+  .calender-box {
+    margin-bottom: 0;
+      iframe {
+        margin: 8px 8px 0;
+      }
+  }
+
+  /*フリースペース*/
+  .free_space {
+    padding-bottom: 16px;
+    margin-bottom: 0;
+      img {
+        max-width: 100%;
+      }
+  }
+}
+
+/*---------------------------------------------
+  footer
+----------------------------------------------*/
+
+#footer {
+  width:960px;
+  max-width:960px;
+  overflow:hidden;
+  margin: 0;
+
+    & > div {
+      width:100%;
+      margin-bottom:16px;
+    }
+
+    /*バナー*/
+    .banner-box {
+      height: auto;
+    }
+
+    /*フリースペース*/
+    .free_space {
+      img {
+        max-width: 100%
+      }
+    }
+
+    /*お買物ガイド*/
+    .info-box {
+      width: 960px;
+      display: inline-block;
+
+      h2 {
+        width: 960px;
+        height: 45px;
+      }
+
+      ul.info-cont {
+        clear: both;
+
+        li {
+          margin: 0 0 48px 48px;
+          float: left;
+          display: inline-block;
+
+          &:first-child {
+            margin-left: 0;
+          }
+
+          &.last {
+            width: 580px;
+            min-height: 100px;
+          }
+
+          h3 {
+            margin: 0 0 16px 0;
+
+            img {
+              width:16px;
+              height: 16px;
+              float: left;
+              margin: -2px 8px 0 0;
+            }
+          }
+
+          h4 {
+            line-height: 1.3em;
+            margin:0 0 8px 0;
+
+            img {
+              margin: 0 8px -4px 8px;
+            }
+          }
+
+          h5 {
+            margin-top: 16px;
+          }
+
+          p {
+            line-height: 1.3em;
+
+            &.kome {
+              margin: 8px 0;
+            }
+
+            &.haisou-text {
+              margin-bottom: 16px;
+            }
+
+            &.link {
+              float: right;
+              display: inline-block;
+              margin: 16px 0 0 0;
+            }
+          }
+
+          img.inline {
+            margin-right: 4px;
+          }
+
+          .doroyo-box {
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    .draginfo-box {
+      width: 960px;
+      display: inline-block;
+
+      .draginfo-cont {
+        padding: 24px;
+        clear: both;
+
+        .right {
+          font-size: 13px;
+          vertical-align: top;
+          display: table-cell;
+          width: 696px;
+          background: #fff;
+          border: 1px solid #ddd;
+          border-radius: 2px;        /* CSS3草案 */
+          -webkit-border-radius: 2px;    /* Safari,Google Chrome用 */
+          -moz-border-radius: 2px;   /* Firefox用 */
+          padding: 16px;
+        }
+
+        .left {
+          display: table-cell;
+          width: 200px;
+          padding-right: 32px;
+
+          li {
+            list-style: none;
+            margin-bottom: 8px;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+}
+
+
+/*---------------------------------------------
+  shoptop
+----------------------------------------------*/
+
+#shoptop {
+  width:728px;
+  max-width:728px;
+  overflow:hidden;
+  margin: 0 20px 0 0;
+
+  & > div {
+    width:100%;
+    margin-bottom:16px;
+  }
+
+  /*ワイガヤ*/
+  .waigaya-box {
+    height:470px;
+  }
+
+  /*フリースペース*/
+  .free_space {
+    img {
+      max-width: 100%
+    }
+  }
+
+  /*オススメ商品*/
+  .item-box {
+    padding-bottom: 16px;
+    margin-bottom: 0;
+  }
+
+  /*検索窓*/
+  .search-box {
+    padding:15px 0;
+
+    iframe {
+      width: 100%;
+      height: 62px;
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .search-area {
+      text-align: center;
+    }
+
+    input {
+      height: 24px;
+      border-radius: 1px;        /* CSS3草案 */
+      -webkit-border-radius: 1px;    /* Safari,Google Chrome用 */
+      -moz-border-radius: 1px;   /* Firefox用 */
+    }
+
+    .yen {
+      width: 50px;
+    }
+
+    .searchBtn {
+      height: 30px;
+      position: relative;
+      top: 11px;
+      left: -6px;
+      z-index: 1;
+    }
+  }
+
+  /*バナー*/
+  .banner-box {
+    height: auto;
+    text-align: center;
+    a {
+      display: block;
+    }
+    a,img {
+      max-width: 100%;
+      max-height: 280px;
+      vertical-align: top;
+    }
+  }
+}
+
+
+
+/*---------------------------------------------
+  item-bottom
+----------------------------------------------*/
+
+#item-bottom {
+  width: 728px;
+  max-width: 728px;
+  overflow: hidden;
+  margin: 0 20px 0 0;
+
+  & > div {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+
+  /*ご利用の流れ*/
+  .flow-box {
+    height: 152px;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  /*オススメ商品*/
+  .item-box {
+    height: 240px;
+  }
+
+  /*スライドバナー*/
+  .banner-box {
+    width: 468px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  /*フリースペース*/
+  .free_space {
+    img {
+      max-width: 100%
+    }
+  }
+}

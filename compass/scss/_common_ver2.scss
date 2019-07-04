@@ -1,0 +1,858 @@
+@charset "utf-8";
+
+/* CSS Document */
+
+/*------------------------------------*
+    $ CONTENTS
+ *------------------------------------*/
+/**
+ * CONTENTS .........目次
+ * Mixin ............ミックスイン
+ * Variable .........変数
+ * Reset ............デフォルトの設定
+ * Elements .........クラス名の無いエレメント群
+ * Objects ..........汎用的なデザインのパターン
+ * Components .......オブジェクトで構成された部品群
+ * Override .........cssプラグインのオーバーライド
+ */
+
+/*------------------------------------*
+    $ Mixin
+ *------------------------------------*/
+// flexbox
+@mixin flex($direction:row, $wrap:nowrap, $content:flex-start, $align:flex-start) {
+  display: flex;
+  flex-flow: $direction $wrap;
+  justify-content: $content;
+  align-items: $align;
+}
+
+// テキスト要素の中央構え
+@mixin text-centering {
+  @include flex($content: center, $align: center);
+  padding: 0 8px;
+  word-break: break-all;
+  height: 100%;
+}
+
+
+/*------------------------------------*
+    $ Variable
+ *------------------------------------*/
+
+// 画面左右からの余白
+$LR-margin: 8px !default;
+// 背景色ベース
+$background: #fff !default;
+$background_base2: #f9f9f9 !default;
+// 色
+$color_bace: #333 !default;
+$color_accent: #999 !default;
+$color_yellow: #E3BB1B !default;
+// 文字サイズベース
+$font-size-R: 14px !default;
+$font-size-S: 12px !default;
+$font-size-L: 16px !default;
+// フォント種別
+$font-family: "メイリオ", "Meiryo", "Lucida Grande", Arial, Verdana, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", Osaka, "ＭＳ Ｐゴシック", sans-serif;
+// 入力フォームの高さ
+$form_height: 48px !default;
+
+// レイアウトパターンのフラグ
+//// 商品一覧の境目をborderで区切るか
+$itemBorder: false !default;
+//// drawer-nav のタイトルに背景色をつけるか
+$drawer_titleBackground: false !default;
+//// 商品画像やボタンにbox-shadowをつけるか
+$box_shadow: false !default;
+
+
+/*------------------------------------*
+    $ Reset
+ *------------------------------------*/
+
+body {
+  font-family: $font-family;
+  font-size: $font-size-R;
+  color: $color_bace;
+  margin: 0px;
+  padding: 0;
+  background: transparent;
+  z-index: -100;
+  height: 1px;
+  -webkit-text-size-adjust: 100%; //端末横向き時に文字の拡大を防ぐ
+  * {
+    box-sizing: border-box;
+    position: relative;
+    transition: all .2s ease;
+  }
+}
+h1,h2,h3,h4 {
+  font-size: inherit;
+  font-weight: normal;
+  margin: 0;
+  padding: 0;
+}
+ul,ol,li {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+div,p {
+  padding: 0;
+  margin: 0;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+}
+img {
+  max-width: 100%;
+  border: none;
+}
+input {
+  border: none;
+  box-shadow: none;
+}
+iframe {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: none;
+  overflow: hidden;
+}
+
+
+/*------------------------------------*
+    $ Elements
+ *------------------------------------*/
+
+// リンク要素の挙動
+a {
+  &:hover,
+  &:focus {
+    transition: all .2s ease-in-out;
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+  }
+  & img:hover {
+    opacity:0.8;
+    filter:alpha(opacity=80);
+    -ms-filter: "alpha( opacity=80 )";
+    transition: all .1s ease-in-out;
+    -webkit-transition: all .1s ease-in-out;
+    -moz-transition: all .1s ease-in-out;
+  }
+}
+
+// ul要素はほぼ幅100%
+ul {
+  width: 100%;
+  height: 100%;
+}
+
+// 検索まど
+input {
+  height: 32px;
+  line-height: 32px;
+  border-radius: 1px;
+  -webkit-border-radius: 1px;
+  -moz-border-radius: 1px;
+  box-shadow: 2px 2px 2px #eee inset;
+  padding: 4px;
+}
+
+/*------------------------------------*
+    $ Objects
+ *------------------------------------*/
+
+// wrapper ---------------------------*/
+#header,
+#left,
+#footer,
+#shoptop,
+#item-bottom {
+  & > div {
+    width:100%;
+    margin-bottom:16px;
+    overflow:hidden;
+  }
+}
+
+// 販促テーマ --------------------------*/
+.kikaku-box {
+  width: 100%;
+  height: 160px;
+  font-weight: bold;
+  color: #fff;
+  #start,
+  #wave,
+  #end {
+    position: absolute;
+  }
+}
+
+// フリースペース -------------------------*/
+// フリースペースの中身をリセット
+div.free_space {
+  font-family: initial;
+  letter-spacing: initial;
+  line-height: 1.4em; //ブラウザによる行間変化防止
+
+    div,p,ul,li,h1,h2,h3,h4,h5 {
+      margin: initial;
+      padding: initial;
+    }
+    a {
+      display: initial;
+      text-decoration: initial;
+      color: initial;
+    }
+}
+
+// 検索まどiframe ----------------------*/
+.search-box {
+  .search-area {
+    padding-top: 0 !important;
+    font-size: $font-size-S;
+  }
+  .icon {
+    display: inline-block;
+    float: left;
+    margin: 8px 0;
+  }
+  .yen {
+    width: 50px;
+    margin-right: 4px;
+  }
+  form p {
+    @include flex($align: center);
+  }
+  .searchBtn,
+  input[value="検索"] {
+    border: none;
+    cursor: pointer;
+    z-index: 1;
+    padding: 0;
+    vertical-align: middle;
+  }
+  // ヘッダー内の検索まど
+  &.nav-search {
+    input[name="sitem"] {
+      width: 260px;
+    }
+  }
+}
+
+// バナー設定欄 ------------------------*/
+.banners {
+  height: auto;
+  text-align: center;
+  a {
+    display: block;
+    width: 100%;
+  }
+  // スライドバナー
+  iframe {
+    width: 468px;
+  }
+  .banner-box {
+    img {
+      max-height: 100%;
+      vertical-align: top;
+    }
+  }
+}
+
+// レフトナビの看板画像
+.titleImg {
+  width: 200px;
+  height: 45px;
+}
+
+
+/*------------------------------------*
+    $ Components
+ *------------------------------------*/
+
+/* ヘッダー ----------------------------*/
+#header {
+  width:960px;
+  max-width:960px;
+  margin:0 20px 0 0;
+
+  // 販促テーマ(開催期間の表示位置指定)
+  .kikaku-box {
+    font-size: 20px;
+    #start {
+      width: 230px;
+      right: 230px;
+      bottom: 1px;
+    }
+    #wave {
+      width: 50px;
+      right: 197px;
+      bottom: 1px;
+    }
+    #end {
+      width: 230px;
+      right: -10px;
+      bottom: 1px;
+    }
+  }
+
+  // 看板画像(大)
+  .kanban-large {
+    text-align: center;
+  }
+
+  // 看板画像(小)
+  @mixin kanban-small-size {
+    max-width: 480px;
+    max-height: 64px;
+  }
+  .kanban-small {
+    @include flex($content: space-between, $align: flex-end);
+    .bnr-wrap {
+      @include kanban-small-size;
+      img {
+        @include kanban-small-size;
+      }
+    }
+    .text-wrap {
+      font-size: $font-size-S;
+      text-align: center;
+      span {
+        display: inline-block;
+        padding: 1px 4px;
+        margin: 0 4px 0 8px;
+      }
+    }
+  }
+
+  // 看板画像(画像無し)
+  .shopname-area {
+    @include flex($content: space-between, $align: flex-end);
+    height: 56px;
+    .shopname {
+      font-size: $font-size-L;
+      margin-right: 16px;
+    }
+    .eigyou {
+      font-size: $font-size-S;
+      padding: 16px 0 0;
+      span {
+        display: inline-block;
+        padding: 1px 4px;
+        margin: 0 4px 0 8px;
+      }
+    }
+  }
+
+  // ナビ(大)
+  .nav-big {
+    height: 64px;
+    ul {
+      @include flex($content: space-between);
+    }
+    li {
+      width: calc(100% / 6);
+      height: 100%;
+      a {
+        @include text-centering;
+      }
+    }
+  }
+
+  // ナビ(中)
+  .nav-middle {
+    @include flex;
+    height: 64px;
+    .left {
+      width: 65%;
+      height: 100%;
+      .inner {
+        @include text-centering;
+        ul {
+          @include flex;
+          height: auto;
+        }
+        a {
+          @include text-centering;
+          padding: 0 8px;
+          &:before {
+            margin-right: 2px;
+          }
+        }
+      }
+    }
+    .right {
+      @include text-centering;
+      width: 35%;
+      height: 100%;
+      iframe {
+        height: 32px;
+      }
+    }
+  }
+
+  /*ナビ(小)*/
+  .nav-small {
+    .nav {
+      height: 24px;
+      ul {
+        @include flex;
+      }
+      li {
+        @include text-centering;
+        height: 24px;
+        padding: 0;
+        img {
+          width: 14px;
+          height: 14px;
+          margin: 0 4px;
+          display: block;
+          float: left;
+        }
+        a {
+          line-height: 24px;
+          font-size: $font-size-S;
+          &:before {
+            margin-right: 8px;
+          }
+        }
+      }
+    }
+    .search-box {
+      @include flex($content: space-between, $align: center);
+      width: 100%;
+      height: 64px;
+      .search-area {
+        font-size: $font-size-S;
+        width: 45%;
+        iframe {
+          height: 32px;
+        }
+      }
+      .souryo {
+        width: 55%;
+        text-align: right;
+        font-size: $font-size-S;
+        p.icon {
+          display: none;
+        }
+        b {
+          font-size: $font-size-R;
+          color: $color_accent;
+        }
+      }
+    }
+  }
+
+  /*カテゴリ(大)*/
+  .category-big {
+    ul {
+      @include flex($wrap: wrap, $content: space-between);
+    }
+    li {
+      width: calc(100% / 3);
+      height: 64px;
+      overflow: hidden;
+      a {
+        @include text-centering;
+        width: 100%;
+        height: 100%;
+        // テキスト装飾
+        font-size: $font-size-R;
+        &:after {
+          display: inline-block;
+          position: absolute;
+          right: 8px;
+        }
+      }
+    }
+  }
+
+  // カテゴリ(小)
+  .category-small {
+    height: 64px;
+    ul {
+      @include text-centering;
+      justify-content: flex-start;
+    }
+    li {
+      max-height: 64px;
+      overflow: hidden;
+      a {
+        @include text-centering;
+        font-size: $font-size-S;
+      }
+    }
+  }
+
+  // バナー
+  .banners {
+    @include flex($wrap: wrap, $content: space-between);
+    & > div {
+      width: 474px;
+      height: 120px;
+      margin-bottom: 6px;
+    }
+    .slidebanner {
+      padding-right: 16px;
+    }
+    .banner-box {
+      text-align: center;
+      p,
+      a {
+        height: 100%;
+      }
+    }
+  }
+
+  // 売れ筋ランキング
+  .item-box {
+    height: 310px;
+  }
+}
+
+
+// レフトナビ --------------------------*/
+#left {
+  width:200px;
+  margin:0 12px 0 0;
+
+  // 毎日元気に営業中
+  .koushin {
+    height:40px;
+  }
+
+  // 売れ筋トップ3
+  .item-box {
+    height:570px;
+  }
+
+  // 検索窓
+  .search-box {
+    .search-table {
+      margin: 8px 0 0;
+      iframe {
+        height: 36px;
+      }
+      .input-form {
+        width: 140px;
+      }
+    }
+  }
+
+  // 価格帯検索
+  .price-search-box {
+    h3 {
+      text-align: center;
+      margin-bottom: 16px;
+    }
+    .price-table {
+      li {
+        text-align: left;
+        padding: 4px 0;
+        a {
+          font-size: $font-size-S;
+          font-weight: bold;
+          padding-left: 24px;
+          span {
+            font-size: 10px;
+            letter-spacing: -0.5px;
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+
+  // カテゴリ
+  .category-box {
+    padding-bottom: 16px;
+    li {
+      font-size: $font-size-R;
+      line-height: 1em;
+      a {
+        display: block;
+        width: 100%;
+      }
+      &.large-category a {
+        color: $color_accent;
+      }
+      &.medium-category a {
+        background-position: 2px 50%;
+        background-repeat: no-repeat;
+      }
+      &.small-category a {
+        background-position: 30px 50%;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+
+  // バナー
+  .banner-box {
+    a,img {
+      max-width: 100%;
+      max-height: 200px;
+      vertical-align: top;
+    }
+  }
+
+  // お届けについて
+  .doroyo-box {
+    padding-bottom: 16px;
+    hr {
+      display: none;
+    }
+    .icon {
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .info-box {
+      font-size: $font-size-S;
+      margin: 8px 0;
+      h3 {
+        color: $color_accent;
+        font-size: $font-size-R;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 8px;
+      }
+      p {
+        font-size: 11px;
+        line-height: 1.6em;
+        padding-top: 4px;
+      }
+    }
+  }
+
+  // カレンダー
+  .calender-box {
+    margin-bottom: 0;
+    iframe {
+      margin: 8px 8px 0;
+      width: 184px;
+    }
+  }
+}
+
+
+// フッター --------------------------*/
+#footer {
+  width:960px;
+
+  // お買物ガイド
+  .info-box {
+    // 万が一フッターがはみ出しても表示される様にする
+    overflow: visible;
+    // 見出し
+    h2 {
+      width: 100%;
+      height: 45px;
+    }
+    .info-cont {
+      @include flex($content: space-between, $align: stretch);
+      // 各項目
+      li {
+        width: calc(100% / 3);
+        &.last {
+          width: calc(100% / 3 * 2);
+        }
+        // 項目のタイトル
+        h3 {
+          margin: 0 0 16px 0;
+          img {
+            width:16px;
+            height: 16px;
+            float: left;
+            margin: -2px 8px 0 0;
+          }
+        }
+        h4 {
+          line-height: 1.3em;
+          margin:0 0 8px 0;
+          img {
+            margin: 0 8px -4px 8px;
+          }
+        }
+        h5 {
+          margin: 24px 0 4px;
+        }
+        p {
+          margin: 8px 0 12px;
+          line-height: 140%;
+          font-size: $font-size-S;
+          b {
+            color: $color_accent;
+          }
+          &.kome {
+            color: rgba($color_bace, .6);
+            margin: 8px 0;
+          }
+          &.haisou-text {
+            margin-bottom: 16px;
+          }
+          &.link {
+            font-size: $font-size-R;
+            float: right;
+            display: inline-block;
+            margin: 16px 0 0 0;
+          }
+        }
+        img.inline {
+          margin-right: 4px;
+        }
+        .doroyo-box {
+          text-align: center;
+          iframe {
+            width: 200px;
+          }
+        }
+      }
+    }
+  }
+
+  // 医薬品に関する特記
+  .draginfo-box {
+    width: 960px;
+    .draginfo-cont {
+      padding: 24px;
+      clear: both;
+      .right {
+        font-size: 13px;
+        vertical-align: top;
+        display: table-cell;
+        width: 696px;
+        background: #fff;
+        border: 1px solid #ddd;
+        border-radius: 2px;        /* CSS3草案 */
+        -webkit-border-radius: 2px;    /* Safari,Google Chrome用 */
+        -moz-border-radius: 2px;   /* Firefox用 */
+        padding: 16px;
+      }
+      .left {
+        display: table-cell;
+        width: 200px;
+        padding-right: 32px;
+
+        li {
+          list-style: none;
+          margin-bottom: 8px;
+
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+// トップページ中央部 ---------------*/
+#shoptop {
+  width:728px;
+  margin: 0 20px 0 0;
+
+  // ワイガヤ
+  .waigaya-box {
+    height:470px;
+  }
+
+  // オススメ商品
+  .item-box {
+    padding-bottom: 16px;
+    margin-bottom: 0;
+  }
+
+  // 検索窓
+  .search-box {
+    padding:15px 0;
+    text-align: center;
+    iframe {
+      height: 62px;
+    }
+    .search-area {
+      display: inline-block;
+    }
+  }
+
+  // バナー
+  .banner-box {
+    height: auto;
+    text-align: center;
+    a {
+      display: block;
+    }
+    a,img {
+      max-width: 100%;
+      max-height: 280px;
+      vertical-align: top;
+    }
+  }
+}
+
+
+/* 全ページ共通説明文(大) ---------------*/
+#item-bottom {
+  width: 728px;
+  max-width: 728px;
+  overflow: hidden;
+  margin: 0 20px 0 0;
+
+  // ご利用の流れ
+  .flow-box {
+    height: 152px;
+    img {
+      width: 100%;
+    }
+  }
+
+  // オススメ商品
+  .item-box {
+    height: 240px;
+  }
+
+  // スライドバナー
+  .banner-box {
+    width: 468px;
+    height: 120px;
+    margin: 0 auto;
+  }
+
+  // テーマ内の開催期間
+  .kikaku-box {
+    font-size: 18px;
+    #start {
+      width: 200px;
+      right: 240px;
+      bottom: 3px;
+    }
+    #wave {
+      width: 40px;
+      right: 200px;
+      bottom: 3px;
+    }
+    #end {
+      width: 200px;
+      right: 10px;
+      bottom: 3px;
+    }
+  }
+}
+
+
+/*---------------------------------------------
+  Override
+----------------------------------------------*/
+// 楽天側のclass上書き
+td.lossleader_item_name {
+  word-break: break-all;
+}

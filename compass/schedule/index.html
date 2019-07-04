@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+        body {
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+        }
+        #schedule {
+            width: 960px;
+            height: 160px;
+            position: relative;
+            background-image: url(banner.jpg?1554796405);
+            background-repeat: no-repeat;
+            font-size: 32px;
+            font-weight: bold;
+            color: #fff;
+        }
+        #start {
+            position: absolute;
+            width: 250px;
+            right: 400px;
+            bottom: 62px;
+        }
+        #wave {
+            position: absolute;
+            width: 50px;
+            right: 350px;
+            bottom: 62px;
+        }
+        #end {
+            position: absolute;
+            width: 250px;
+            right: 100px;
+            bottom: 62px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="schedule">
+        <div id="start"></div>
+        <div id="wave">～</div>
+        <div id="end"></div>
+    </div>
+    <div id="remark"  style="display: none;">
+      ##remark##
+    </div>
+    <div class="contextMenu" id="menu">
+        <ul>
+            <li id="powered_by"></li>
+        </ul>
+    </div>
+</body>
+
+</html>

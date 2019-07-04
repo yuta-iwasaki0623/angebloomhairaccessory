@@ -1,0 +1,261 @@
+﻿@charset "utf-8";
+
+// 文字サイズベース
+$font-size-R: 14px !default;
+$font-size-S: 12px !default;
+$font-size-L: 16px !default;
+// 色
+$color_bace: #fff;
+$color_accent: #E2D8B5;
+// 背景色ベース
+$background: #C12A2C;
+// 背景色ベース2
+$background_base2: $color_accent;
+// 入力フォームの高さ
+$form_height: 48px;
+// フォント種別
+$font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+//// 商品画像やボタンにbox-shadowをつけるか
+$box_shadow: true;
+@import "sp_common";
+
+
+/* CSS Document */
+
+/*------------------------------------*
+    $ CONTENTS
+ *------------------------------------*/
+/**
+ * CONTENTS .........目次
+ * Mixin ............ミックスイン
+ * Variable .........変数
+ * Reset ............デフォルトの設定
+ * Elements .........クラス名の無いエレメント群
+ * Objects ..........汎用的なデザインのパターン
+ * Components .......オブジェクトで構成された部品群
+ * Override .........cssプラグインのオーバーライド
+ * Style trumps .....エラー状態など
+ */
+
+/*------------------------------------*
+    $ Mixin
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Variable
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Reset
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Elements
+ *------------------------------------*/
+
+// 各section単位のタイトル
+.section h2 {
+  font-weight: normal;
+  color: $color_accent;
+  line-height: 200%;
+  margin: 16px 0 8px;
+  background: url(../img/background.jpg) center;
+  background-size: 100%;
+  text-align: center;
+}
+
+// 共通のinput装飾
+input[type=text] {
+  @include border(1px,lighten($color_bace, 10%),4px);
+  margin-right: 2px;
+}
+
+/*------------------------------------*
+    $ Objects
+*------------------------------------*/
+
+.ranking_item {
+  .item_name {
+    font-size: $font-size-S !important;
+  }
+  .item_price {
+    font-family: Verdana;
+    letter-spacing: -.5px;
+  }
+}
+
+#itemRanking {
+  .item_rank {
+    color: #000 !important;
+    font-family: Verdana;
+  }
+}
+
+.link_pageCenter {
+  color: #000;
+}
+
+
+/*------------------------------------*
+    $ Components
+ *------------------------------------*/
+
+/* ヘッダーナビ
+--------------------------------------*/
+#headNav {
+  background: $background_base2;
+  // ハンバーガーの枠線無し
+  .drawer-toggle {
+    border: none;
+    box-shadow: none;
+  }
+  ul li {
+    color: #000;
+  }
+}
+
+/* 検索まど
+--------------------------------------*/
+#searchBox.section {
+  background: none;
+  margin: 24px 0;
+  // 検索まどのinput
+  .searchBox_input form{
+    input[type="submit"] {
+      background: linear-gradient(darken($color_accent, 20%), darken($color_accent, 30%));
+      color: #fff;
+    }
+  }
+  // 検索ボックス内の検索キーワード
+  .searchBox_keyword {
+    li {
+      font-size: $font-size-R;
+      color: #000;
+      background: $background_base2;
+      a {
+        padding: 6px 8px;
+      }
+    }
+  }
+}
+
+/* おすすめ商品
+--------------------------------------*/
+#itemRecommend {
+  .item_thum {
+    padding: 4px;
+  }
+  .item_name {
+    font-size: $font-size-R;
+  }
+}
+
+/* イベント・特集情報
+--------------------------------------*/
+// バナー一覧部
+.event_bannerWrapper {
+  margin: 16px 0;
+}
+
+/* カテゴリーから探す
+--------------------------------------*/
+#category {
+  margin-bottom: 16px;
+  .category_itemWrapper {
+    margin-top: 0;
+  }
+  // 1階層目
+  .node1 {
+    color: $color_accent;
+    background: #0B573D;
+    border-bottom: 1px solid darken(#0B573D, 10%);
+    a:after {
+      background: $color_accent;
+      color: #0B573D;
+      font-size: 12px;
+    }
+    &.active a:after {
+      background: darken($color_accent, 10%);
+      color: #0B573D;
+    }
+  }
+  // 2階層目/3階層目
+  .node2,
+  .node3 {
+    border-color: rgba(#000,.1) !important;
+    color: #000;
+  }
+  .node2 {
+    background: $color_accent;
+    a:before {
+      content: none;
+    }
+  }
+  .node3 {
+    background: #fff;
+    a:before {
+      content: "・";
+      color: $color_accent;
+    }
+  }
+}
+
+/* お買い物ガイド
+--------------------------------------*/
+#shoppingGuide {
+  background: $background;
+  li {
+    border: none;
+    padding: 8px 16px;
+    &:before {
+      // font-size: 14px;
+      color: $color_accent !important;
+    }
+  }
+  .shoppingGuide_info {
+    margin: 16px 8px;
+    background: $background_base2;
+    padding: 8px;
+    border: 2px solid darken($background_base2, 5%);
+  }
+}
+
+/* フッター
+--------------------------------------*/
+#footer {
+  background: #0B573D;
+  color: $color_bace;
+}
+
+/* ドロワーナビゲーション
+--------------------------------------*/
+.drawer-nav {
+  background: $background_base2 !important;
+  h2 {
+    color: darken($background_base2, 30%);
+  }
+  #shoppingGuide {
+    background: none;
+    li {
+      background: #0B573D;
+      color: $color_bace;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* 「上へ」ナビゲーション
+--------------------------------------*/
+.anchor_top a {
+  color: $background;
+}
+
+/*------------------------------------*
+    $ Override
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Style trumps
+ *------------------------------------*/

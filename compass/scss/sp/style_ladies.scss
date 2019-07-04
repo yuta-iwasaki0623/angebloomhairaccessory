@@ -1,0 +1,156 @@
+﻿@charset "utf-8";
+
+// common内変数の上書き
+// 色
+$color_bace: #555 !default;
+$color_accent: #6596CC;
+// 背景色ベース
+$background: #fff;
+// 背景色ベース2#fefefd
+$background_base2: #f8f8f8;
+// 商品一覧の境目をborderで区切るか
+$itemBorder: true;
+// drawer-nav のタイトルに背景色をつけるか
+$drawer_titleBackground: true;
+
+@import "sp_common";
+
+
+/* CSS Document */
+
+/*------------------------------------*
+    $ CONTENTS
+ *------------------------------------*/
+/**
+ * CONTENTS .........目次
+ * Mixin ............ミックスイン
+ * Variable .........変数
+ * Reset ............デフォルトの設定
+ * Elements .........クラス名の無いエレメント群
+ * Objects ..........汎用的なデザインのパターン
+ * Components .......オブジェクトで構成された部品群
+ * Override .........cssプラグインのオーバーライド
+ * Style trumps .....エラー状態など
+ */
+
+/*------------------------------------*
+    $ Mixin
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Variable
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Reset
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Elements
+ *------------------------------------*/
+
+// 各section単位のタイトル 
+.section h2 {
+  color: $color_accent;
+  text-align: center;
+  padding: 12px;
+  background: url(../img/title.png) center no-repeat;
+  border-top: 2px solid darken($color_accent, 5%);
+  border-bottom: 2px solid darken($color_accent, 5%);
+}
+
+// 共通のinput装飾
+input[type=text] {
+  @include border(2px,$color_accent,2px);
+}
+
+/*------------------------------------*
+    $ Objects
+*------------------------------------*/
+
+.item_price {
+  color: #F76241 !important;
+}
+
+/*------------------------------------*
+    $ Components
+ *------------------------------------*/
+
+/* 検索まど
+--------------------------------------*/
+// 検索まどのinput
+.searchBox_input form{
+  input[type="submit"] {
+    background: $color_accent;
+    color: #fff;
+  }
+}
+// 検索ボックス内の検索キーワード
+.searchBox_keyword {
+  li {
+    @include border($px:0);
+    color: #fff;
+    background: #F76241;
+    border-radius: 2px;
+  }
+}
+
+/* イベント・特集情報
+--------------------------------------*/
+// バナー一覧部
+.event_bannerWrapper {
+  margin: 16px 0;
+}
+
+/* カテゴリーから探す
+--------------------------------------*/
+#category {
+  .node3 {
+    background: #fff;
+  }
+}
+
+/* お買い物ガイド
+--------------------------------------*/
+#shoppingGuide {
+  h2 {
+    margin-top: 0;
+  }
+  li {
+    border-color: darken($background_base2, 10%);
+  }
+  li:before {
+    color: $color_accent;
+  }
+}
+
+/* フッター
+--------------------------------------*/
+#footer {
+  background: $background_base2;
+}
+
+/* ドロワーナビゲーション
+--------------------------------------*/
+.drawer-nav {
+  #searchBox {
+    background: none;
+  }
+  // お買い物ガイド
+  #shoppingGuide {
+    background: none;
+    li {
+      box-shadow: 0 1px 0 rgba(#000,.2);
+    }
+  }
+}
+
+
+
+/*------------------------------------*
+    $ Override
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Style trumps
+ *------------------------------------*/

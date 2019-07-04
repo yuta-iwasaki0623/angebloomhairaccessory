@@ -1,0 +1,17 @@
+/* フローティングバナー */
+.rightBannerImg {
+	display: block;
+	width: 42px;
+	position: fixed;
+	z-index: 1000;
+	right: 8px; /* 左右の調節 */
+	bottom: 154px; /* 上下の調節 */
+}
+.rightBannerImg_02 {
+	display: block;
+	width: 42px;
+	position: fixed;
+	z-index: 1000;
+	right: 8px; /* 左右の調節 */
+	bottom: 232px; /* 上下の調節 */
+}

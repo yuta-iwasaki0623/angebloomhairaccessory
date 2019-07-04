@@ -1,0 +1,9 @@
+/* フローティングバナー */
+.rightBannerImg {
+	display: block;
+	width: 90px;
+	position: fixed;
+	z-index: 1000;
+	right: 8px; /* 左右の調節 */
+	bottom: 300px; /* 上下の調節 */
+}

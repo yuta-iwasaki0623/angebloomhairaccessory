@@ -1,0 +1,257 @@
+﻿@charset "utf-8";
+
+// 文字サイズベース
+$font-size-R: 13px !default;
+$font-size-S: 11px !default;
+$font-size-L: 15px !default;
+// 色
+$color_bace: #8c7d64;
+$color_accent: #8c7d64;
+// 背景色ベース
+$background: #FAF8F4;
+// 背景色ベース2
+$background_base2: darken($background, 10%);
+// 入力フォームの高さ
+$form_height: 40px;
+@import "sp_common";
+
+
+/* CSS Document */
+
+/*------------------------------------*
+    $ CONTENTS
+ *------------------------------------*/
+/**
+ * CONTENTS .........目次
+ * Mixin ............ミックスイン
+ * Variable .........変数
+ * Reset ............デフォルトの設定
+ * Elements .........クラス名の無いエレメント群
+ * Objects ..........汎用的なデザインのパターン
+ * Components .......オブジェクトで構成された部品群
+ * Override .........cssプラグインのオーバーライド
+ * Style trumps .....エラー状態など
+ */
+
+/*------------------------------------*
+    $ Mixin
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Variable
+ *------------------------------------*/
+
+$color_yellow: #EDB43B;
+
+/*------------------------------------*
+    $ Reset
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Elements
+ *------------------------------------*/
+
+// 各section単位のタイトル
+.section h2 {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-size: $font-size-R;
+  letter-spacing: 1px;
+  margin: 24px 0 8px;
+  padding: 16px 0;
+  text-align: center;
+  background: url(../img/wide_bg.png) no-repeat;
+  background-size: 100%;
+  &:before {
+    color: $color_yellow;
+    font-size: $font-size-L;
+    display: inline-block;
+    margin-right: 8px;
+  }
+}
+
+// 共通のinput装飾
+input[type=text] {
+  @include border(1px,#ccc,4px);
+  margin-right: 2px;
+}
+
+/*------------------------------------*
+    $ Objects
+*------------------------------------*/
+
+.ranking_item {
+  .item_thum {
+    border-radius: 4px;
+    overflow: hidden;
+  }
+}
+
+/*------------------------------------*
+    $ Components
+ *------------------------------------*/
+
+/* ヘッダーナビ
+--------------------------------------*/
+#headNav {
+  background: #FFF;
+  .headNav_pc .fa,
+  .headNav_cart .fa{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    margin-top: -2px;
+    margin-bottom: 3px;
+    background: $background;
+    color: $color_accent;
+    font-size: 12px;
+    font-weight: bold;
+  }
+}
+
+/* テーマ
+--------------------------------------*/
+#theme {
+  // background: none;
+  // padding: 0;
+}
+
+/* 検索まど
+--------------------------------------*/
+#searchBox.section {
+  // 検索まどのinput
+  .searchBox_input form{
+    input[type="submit"] {
+      height: $form_height - 4px !important;
+      background: $color_bace;
+      border: 1px solid darken($color_bace, 10%);
+      color: #fff;
+      border-radius: 4px;
+      margin-top: 1px;
+    }
+  }
+  // 検索ボックス内の検索キーワード
+  .searchBox_keyword {
+    a {
+      background: rgba(#fff, .6);
+      border-radius: 4px;
+      text-decoration: underline !important;
+    }
+  }
+}
+
+/* ランキング
+--------------------------------------*/
+#itemRanking {
+  h2:before {
+    content: "ITEM RANKING";
+  }
+}
+
+/* おすすめ商品
+--------------------------------------*/
+#itemRecommend {
+  h2:before {
+    content: "ITEM RECOMMEND";
+  }
+}
+
+/* イベント・特集情報
+--------------------------------------*/
+#event {
+  h2:before {
+    content: "EVENT";
+  }
+}
+// バナー一覧部
+.event_bannerWrapper {
+  margin: 16px 0;
+}
+
+/* カテゴリーから探す
+--------------------------------------*/
+#category {
+  margin-bottom: 16px;
+  h2:before {
+    content: "CATEGORY";
+  }
+  .category_itemWrapper {
+    margin-top: 0;
+  }
+  // 1階層目
+  .node1 {
+    // background: lighten($color_accent,5%);
+    border-bottom: 1px dotted $background_base2;
+    &.active a:after {
+      color: $color_yellow;
+    }
+  }
+  // 2階層目/3階層目
+  .node2,
+  .node3 {
+    border-color: $background_base2 !important;
+    color: $color_bace;
+  }
+  .node2 {
+    background: lighten($background_base2, 5%);
+    a:before {
+      content: none;
+    }
+    a.active:after {
+      color: $background;
+    }
+  }
+  .node3 {
+    background: #fff;
+    a:before {
+      @include fontawesome("・");
+      color: rgba($color_bace, .4);
+      margin-right: 4px;
+    }
+  }
+}
+
+/* お買い物ガイド
+--------------------------------------*/
+#shoppingGuide {
+  background: $background;
+  li {
+    background: #fff;
+    border: 1px solid $background_base2;
+    padding: 8px 16px;
+  }
+}
+
+/* ドロワーナビゲーション
+--------------------------------------*/
+.drawer-nav {
+  h2 {
+    color: rgba($color_accent, .6);
+  }
+  #shoppingGuide {
+    background: none;
+    li {
+      background: $background;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* 「上へ」ナビゲーション
+--------------------------------------*/
+.anchor_top a {
+  // background: #F3F2E9;
+  // color: $background;
+}
+
+/*------------------------------------*
+    $ Override
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Style trumps
+ *------------------------------------*/

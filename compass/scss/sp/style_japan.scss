@@ -1,0 +1,173 @@
+﻿@charset "utf-8";
+
+// common内変数の上書き
+$color_accent: #724100;
+// 背景色ベース
+$background: darken(#fefefd, 5%);
+// 背景色ベース2#fefefd
+$background_base2: #f1ebe0;
+@import "sp_common";
+
+
+/* CSS Document */
+
+/*------------------------------------*
+    $ CONTENTS
+ *------------------------------------*/
+/**
+ * CONTENTS .........目次
+ * Mixin ............ミックスイン
+ * Variable .........変数
+ * Reset ............デフォルトの設定
+ * Elements .........クラス名の無いエレメント群
+ * Objects ..........汎用的なデザインのパターン
+ * Components .......オブジェクトで構成された部品群
+ * Override .........cssプラグインのオーバーライド
+ * Style trumps .....エラー状態など
+ */
+
+/*------------------------------------*
+    $ Mixin
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Variable
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Reset
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Elements
+ *------------------------------------*/
+
+// 各section単位のタイトル
+.section h2 {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  color: $color_accent;
+  text-align: center;
+  padding: 8px;
+  margin: 16px 0;
+  background: url("../img/background.png") center;
+  border-top: 1px solid darken(#FFD632, 15%);
+  border-bottom: 1px solid darken(#FFD632, 15%);
+}
+
+// 共通のinput装飾
+input[type=text] {
+  @include border(2px,$color_accent,2px);
+}
+
+/*------------------------------------*
+    $ Objects
+*------------------------------------*/
+
+.ranking_item {
+  .item_price{
+    font-size: $font-size-L;
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  }
+  .item_thum {
+    img {
+      box-shadow: 0 0 4px rgba(#000, .2);
+    }
+  }
+}
+
+.link_pageCenter {
+  background: darken(#B9BE8F, 10%);
+}
+
+/*------------------------------------*
+    $ Components
+ *------------------------------------*/
+
+/* テーマ
+--------------------------------------*/
+#theme {
+  .caption {
+    color: darken($background_base2, 35%);
+  }
+}
+
+/* 検索まど
+--------------------------------------*/
+// 検索まどのinput
+.searchBox_input form{
+  height: 48px;
+  input[type="submit"] {
+    background: $color_accent;
+    color: #fff;
+  }
+}
+// 検索ボックス内の検索キーワード
+.searchBox_keyword {
+  li {
+    @include border($px:0);
+    color: #fff;
+    background: darken(#B9BE8F, 10%);
+  }
+}
+
+/* イベント・特集情報
+--------------------------------------*/
+// バナー一覧部
+.event_bannerWrapper {
+  margin: 16px 0;
+}
+
+/* カテゴリーから探す
+--------------------------------------*/
+#category {
+  .node3 {
+    a {
+      background: #B9BE8F;
+    }
+  }
+}
+
+/* お買い物ガイド
+--------------------------------------*/
+#shoppingGuide {
+  h2 {
+    margin-top: 0;
+  }
+  li {
+    border-color: darken($background_base2, 10%);
+  }
+  li:before {
+    color: $color_accent;
+  }
+}
+
+/* フッター
+--------------------------------------*/
+#footer {
+  background: $background_base2;
+}
+
+/* ドロワーナビゲーション
+--------------------------------------*/
+.drawer-nav {
+  #searchBox {
+    background: none;
+  }
+  // お買い物ガイド
+  #shoppingGuide {
+    background: none;
+    li {
+      box-shadow: 0 1px 0 rgba(#000,.2);
+    }
+  }
+}
+
+
+
+/*------------------------------------*
+    $ Override
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Style trumps
+ *------------------------------------*/

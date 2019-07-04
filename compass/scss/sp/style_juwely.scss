@@ -1,0 +1,268 @@
+﻿@charset "utf-8";
+
+// 文字サイズベース
+$font-size-R: 13px !default;
+$font-size-S: 11px !default;
+$font-size-L: 15px !default;
+// 色
+$color_bace: #444;
+$color_accent: #B89C59;
+// 背景色ベース
+$background: #fff;
+// 背景色ベース2
+$background_base2: #F8F8F8;
+// 入力フォームの高さ
+$form_height: 40px;
+@import "sp_common";
+
+
+/* CSS Document */
+
+/*------------------------------------*
+    $ CONTENTS
+ *------------------------------------*/
+/**
+ * CONTENTS .........目次
+ * Mixin ............ミックスイン
+ * Variable .........変数
+ * Reset ............デフォルトの設定
+ * Elements .........クラス名の無いエレメント群
+ * Objects ..........汎用的なデザインのパターン
+ * Components .......オブジェクトで構成された部品群
+ * Override .........cssプラグインのオーバーライド
+ * Style trumps .....エラー状態など
+ */
+
+/*------------------------------------*
+    $ Mixin
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Variable
+ *------------------------------------*/
+
+$color_red: #ED2323;
+$color_blue: #73B8E2;
+
+/*------------------------------------*
+    $ Reset
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Elements
+ *------------------------------------*/
+
+// 各section単位のタイトル
+.section h2 {
+  font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  font-size: $font-size-S;
+  letter-spacing: 1px;
+  margin: 24px 0 8px;
+  text-align: center;
+  background: url(../img/back.jpg) no-repeat;
+  border-bottom: 4px double darken($background_base2, 20%);
+  &:before {
+    color: $color_accent;
+    font-size: $font-size-L + 4px;
+    display: block;
+  }
+}
+
+// 共通のinput装飾
+input[type=text] {
+  @include border(1px,#ccc,4px);
+  margin-right: 2px;
+}
+
+/*------------------------------------*
+    $ Objects
+*------------------------------------*/
+
+.ranking_item {
+  .item_thum {
+  padding: 4px;
+  }
+  .item_price {
+    font-family: "游明朝", YuMincho, "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+  }
+}
+
+
+/*------------------------------------*
+    $ Components
+ *------------------------------------*/
+
+/* ヘッダーナビ
+--------------------------------------*/
+#headNav {
+  background: #FFF;
+  // 右側のアイコンだけ色を変える
+  .pull-right .fa{
+    color: $color_accent;
+  }
+}
+
+/* テーマ
+--------------------------------------*/
+#theme {
+  background: none;
+  padding: 0;
+}
+
+/* 検索まど
+--------------------------------------*/
+#searchBox.section {
+  // 検索まどのinput
+  .searchBox_input form{
+    input[type="submit"] {
+      height: $form_height - 4px !important;
+      background: $color_bace;
+      border: 1px solid darken($color_bace, 10%);
+      color: #fff;
+      border-radius: 4px;
+      margin-top: 1px;
+    }
+  }
+  // 検索ボックス内の検索キーワード
+  .searchBox_keyword {
+    li {
+      margin: 0;
+    }
+    a {
+      text-decoration: underline !important;
+      padding: 0;
+    }
+  }
+}
+
+/* ランキング
+--------------------------------------*/
+#itemRanking {
+  h2:before {
+    content: "ITEM RANKING";
+  }
+  .ranking_item {
+    border-bottom: 1px solid #eee;
+  }
+}
+
+/* おすすめ商品
+--------------------------------------*/
+#itemRecommend {
+  h2:before {
+    content: "ITEM RECOMMEND";
+  }
+}
+
+/* イベント・特集情報
+--------------------------------------*/
+#event {
+  h2:before {
+    content: "EVENT";
+  }
+}
+// バナー一覧部
+.event_bannerWrapper {
+  margin: 16px 0;
+}
+
+/* カテゴリーから探す
+--------------------------------------*/
+#category {
+  h2:before {
+    content: "CATEGORY";
+  }
+  margin-bottom: 16px;
+  .category_itemWrapper {
+    margin-top: 0;
+  }
+  // 1階層目
+  .node1 {
+    color: #fff;
+    background: lighten($color_accent,5%);
+    border-bottom: 1px solid darken($color_accent, 5%);
+    a:after {
+      color: rgba(#fff,.8);
+    }
+    &.active a:after {
+      color: #fff;
+    }
+  }
+  // 2階層目/3階層目
+  .node2,
+  .node3 {
+    border-color: lighten($color_accent, 25%) !important;
+    color: $color_bace;
+  }
+  .node2 {
+    background: $background_base2;
+    a:before {
+      content: none;
+    }
+    a.active:after {
+      color: $background;
+    }
+  }
+  .node3 {
+    background: #fff;
+    a:before {
+      @include fontawesome("・");
+      color: rgba($color_bace, .4);
+      margin-right: 4px;
+    }
+  }
+}
+
+/* お買い物ガイド
+--------------------------------------*/
+#shoppingGuide {
+  background: $background;
+  li {
+    background: lighten($color_accent, 40%);
+    border: none;
+    border-radius: 0;
+    padding: 8px 16px;
+  }
+  .shoppingGuide_info {
+    background: $background_base2;
+    padding: 8px;
+  }
+}
+
+/* フッター
+--------------------------------------*/
+#footer {
+  border-top: 4px double #444;
+}
+
+/* ドロワーナビゲーション
+--------------------------------------*/
+.drawer-nav {
+  h2 {
+    color: rgba($color_accent, .6);
+  }
+  #shoppingGuide {
+    background: none;
+    li {
+      background: $background;
+      a {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+/* 「上へ」ナビゲーション
+--------------------------------------*/
+.anchor_top a {
+  // background: #F3F2E9;
+  // color: $background;
+}
+
+/*------------------------------------*
+    $ Override
+ *------------------------------------*/
+
+/*------------------------------------*
+    $ Style trumps
+ *------------------------------------*/
