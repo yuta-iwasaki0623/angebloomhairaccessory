@@ -1,46 +1,46 @@
 {
-	"width": "200",
-	"wrap_width": "200",
-	"height": "570",
-	"item_image_size": "200",
-	"open_window": "_top",
-	"slide_mode": "crossfade",
-	"slide_speed": "1000",
-	"direction": "up",
-	"use_theme": "checked",
-	"theme_image_file": "item_top3.jpg",
-	"use_icon": null,
-	"ranking_font_size": "11",
-	"ranking_color": "#000000",
-	"use_update_date": null,
-	"update_date": null,
-	"update_date_font_size": "11",
-	"update_date_color": "#000000",
-	"use_item_name": "checked",
-	"item_name_color": "#000000",
-	"item_name_font_size": "11",
-	"use_item_price": "checked",
-	"item_price_color": "#000000",
-	"item_price_font_size": "11",
-	"items": [
-		{
-			"name": "グレースサテンバナナクリップ Gray",
-			"url": "https://item.rakuten.co.jp/angebloomhairaccessory/171401b-1",
-			"price": "4,914円",
-			"image": "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/06359512/118633237.jpg?_ex=128x128"
-		},
-		{
-			"name": "グレースサテンバナナクリップ Black",
-			"url": "https://item.rakuten.co.jp/angebloomhairaccessory/171401b-2",
-			"price": "4,914円",
-			"image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/06359512/imgrc0065840112.jpg?_ex=128x128"
-		},
-		{
-			"name": "レザービジューバナナクリップ Beige",
-			"url": "https://item.rakuten.co.jp/angebloomhairaccessory/182014-1",
-			"price": "5,940円",
-			"image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/compass1544491651.jpg?_ex=128x128"
-		}
-	],
-	"version": 1557770691
+  "width": "200",
+  "wrap_width": "200",
+  "height": "570",
+  "item_image_size": "200",
+  "open_window": "_top",
+  "slide_mode": "crossfade",
+  "slide_speed": "1000",
+  "direction": "up",
+  "use_theme": "checked",
+  "theme_image_file": "item_top3.jpg",
+  "use_icon": null,
+  "ranking_font_size": "11",
+  "ranking_color": "#000000",
+  "use_update_date": null,
+  "update_date": null,
+  "update_date_font_size": "11",
+  "update_date_color": "#000000",
+  "use_item_name": "checked",
+  "item_name_color": "#000000",
+  "item_name_font_size": "11",
+  "use_item_price": "checked",
+  "item_price_color": "#000000",
+  "item_price_font_size": "11",
+  "items": [
+    {
+      "name": "トロピカルフラワー バナナクリップ Pink",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191007-2/",
+      "price": "5,400円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066752589.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
+      "name": "トロピカルフラワー バナナクリップ Yellow",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191007-1/",
+      "price": "5,400円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066752365.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
+      "name": "トロピカルフラワー バナナクリップ Blue",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191007-3/",
+      "price": "5,400円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066752635.jpg?_ex=200x200&s=0&r=1"
+    }
+  ],
+  "version": 1557770691
 }
