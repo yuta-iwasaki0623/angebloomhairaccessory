@@ -24,16 +24,22 @@
   "item_price_font_size": "16",
   "items": [
     {
-      "name": "トロピカルフラワー バナナクリップ Pink",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191007-2/",
-      "price": "5,400円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066752589.jpg?_ex=200x200&s=0&r=1"
+      "name": "グレースサテン バナナクリップ Black",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/171401b-2/",
+      "price": "4,914円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/06359512/imgrc0065840112.jpg?_ex=200x200&s=0&r=1"
     },
     {
-      "name": "Patricia（パトリシア）サテン バナナクリップ　Black",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/171402-1/",
-      "price": "4,914円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/06397456/119390698.jpg?_ex=200x200&s=0&r=1"
+      "name": "ボタニカルツイストバナナクリップ Beige",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191008-1/",
+      "price": "5,940円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066813064.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
+      "name": "ボタニカルツイストバナナクリップ Navy",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191008-2/",
+      "price": "5,940円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066813394.jpg?_ex=200x200&s=0&r=1"
     },
     {
       "name": "トロピカルフラワー バナナクリップ Yellow",
@@ -42,34 +48,16 @@
       "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066752365.jpg?_ex=200x200&s=0&r=1"
     },
     {
-      "name": "グレースサテン バナナクリップ Black",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/171401b-2/",
+      "name": "Patricia（パトリシア）サテン バナナクリップ　Black",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/171402-1/",
       "price": "4,914円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/06359512/imgrc0065840112.jpg?_ex=200x200&s=0&r=1"
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/06397456/119390698.jpg?_ex=200x200&s=0&r=1"
     },
     {
-      "name": "Patricia（パトリシア）サテン バナナクリップ　Blue Gray",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/182016-1/",
+      "name": "Patricia（パトリシア）サテン バナナクリップ Navy",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/171402-5/",
       "price": "4,914円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/compass1546840988.jpg?_ex=200x200&s=0&r=1"
-    },
-    {
-      "name": "グレースサテン バナナクリップ　Navy",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/171401b-5/",
-      "price": "4,914円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/06359512/imgrc0065789933.jpg?_ex=200x200&s=0&r=1"
-    },
-    {
-      "name": "トロピカルフラワー バナナクリップ Blue",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191007-3/",
-      "price": "5,400円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066752635.jpg?_ex=200x200&s=0&r=1"
-    },
-    {
-      "name": "マリンストライプバナナクリップ Blue",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/182044-1/",
-      "price": "5,940円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066619009.jpg?_ex=200x200&s=0&r=1"
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/06397456/imgrc0065878328.jpg?_ex=200x200&s=0&r=1"
     },
     {
       "name": "グレースサテン バナナクリップ D.Brown",
@@ -78,28 +66,40 @@
       "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/06359512/132138326.jpg?_ex=200x200&s=0&r=1"
     },
     {
-      "name": "グレースサテンバナナクリップ Lt Beige ",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/171401b-11/",
+      "name": "【Giftラッピング済み】グレースサテン バナナクリップ Gray",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/g171401b-1/",
+      "price": "5,616円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066780115.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
+      "name": "グレースサテン バナナクリップ　Navy",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/171401b-5/",
       "price": "4,914円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/06359512/imgrc0065865010.jpg?_ex=128x128"
-    },
-    {
-      "name": "レイヤードリボンバナナクリップ（パール&ビジュー）Gray",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/182013-1/",
-      "price": "7,344円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/compass1543963892.jpg?_ex=200x200&s=0&r=1"
-    },
-    {
-      "name": "ポニーヘアゴム（リネン）　Beige",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191006-1/",
-      "price": "2,700円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066721695.jpg?_ex=200x200&s=0&r=1"
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/06359512/imgrc0065789933.jpg?_ex=200x200&s=0&r=1"
     },
     {
       "name": "グレースサテンバナナクリップ Beige",
       "url": "https://item.rakuten.co.jp/angebloomhairaccessory/171401b-3/",
       "price": "4,914円",
       "image": "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/06359512/imgrc0065840125.jpg?_ex=128x128"
+    },
+    {
+      "name": "トロピカルフラワー バナナクリップ Pink",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191007-2/",
+      "price": "5,400円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066752589.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
+      "name": "トロピカルフラワー バナナクリップ Blue",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191007-3/",
+      "price": "5,400円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066752635.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
+      "name": "ポニーヘアゴム（リネン）　Beige",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191006-1/",
+      "price": "2,700円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066721695.jpg?_ex=200x200&s=0&r=1"
     }
   ],
   "version": 1557770690
