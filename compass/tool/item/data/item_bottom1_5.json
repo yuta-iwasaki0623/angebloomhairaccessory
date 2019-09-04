@@ -1,58 +1,58 @@
 {
-	"width": "728",
-	"wrap_width": "728",
-	"height": "330",
-	"item_image_size": "130",
-	"open_window": "_top",
-	"slide_mode": "variable",
-	"slide_speed": "1000",
-	"direction": "left",
-	"use_theme": "checked",
-	"theme_image_file": "item_bottom1_5.jpg",
-	"use_icon": null,
-	"ranking_font_size": "11",
-	"ranking_color": "#000000",
-	"use_update_date": null,
-	"update_date": null,
-	"update_date_font_size": "11",
-	"update_date_color": "#000000",
-	"use_item_name": "checked",
-	"item_name_color": "#000000",
-	"item_name_font_size": "11",
-	"use_item_price": "checked",
-	"item_price_color": "#000000",
-	"item_price_font_size": "11",
-	"items": [
-		{
-			"name": "ポニーヘアゴム（ペイズリー） Blue",
-			"url": "https://item.rakuten.co.jp/angebloomhairaccessory/191002-1",
-			"price": "2,700円",
-			"image": "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/imgrc0066718413.jpg"
-		},
-		{
-			"name": "ポニーヘアゴム（ペイズリー） Navy",
-			"url": "https://item.rakuten.co.jp/angebloomhairaccessory/191002-2",
-			"price": "2,700円",
-			"image": "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/imgrc0066718415.jpg"
-		},
-		{
-			"name": "シースルーリボンバナナクリップ　Navy",
-			"url": "https://item.rakuten.co.jp/angebloomhairaccessory/191001-1",
-			"price": "4,914円",
-			"image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066620998.jpg"
-		},
-		{
-			"name": "グレースサテンバナナクリップ Black",
-			"url": "https://item.rakuten.co.jp/angebloomhairaccessory/171401b-2",
-			"price": "4,914円",
-			"image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/06359512/imgrc0065840112.jpg"
-		},
-		{
-			"name": "グレースサテンバナナクリップ Gray",
-			"url": "https://item.rakuten.co.jp/angebloomhairaccessory/171401b-1",
-			"price": "4,914円",
-			"image": "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/06359512/118633237.jpg"
-		}
-	],
-	"version": 1557770692
+  "width": "728",
+  "wrap_width": "728",
+  "height": "330",
+  "item_image_size": "130",
+  "open_window": "_top",
+  "slide_mode": "variable",
+  "slide_speed": "1000",
+  "direction": "left",
+  "use_theme": "checked",
+  "theme_image_file": "item_bottom1_5.jpg",
+  "use_icon": null,
+  "ranking_font_size": "11",
+  "ranking_color": "#000000",
+  "use_update_date": null,
+  "update_date": null,
+  "update_date_font_size": "11",
+  "update_date_color": "#000000",
+  "use_item_name": "checked",
+  "item_name_color": "#000000",
+  "item_name_font_size": "11",
+  "use_item_price": "checked",
+  "item_price_color": "#000000",
+  "item_price_font_size": "11",
+  "items": [
+    {
+      "name": "【楽天スーパーセール◎送料無料】レースリボンバナナクリップ （野山千鶴さんコラボ） White",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191005-1/",
+      "price": "4,914円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066761780.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
+      "name": "【楽天スーパーセール◎送料無料】ジャガードフリルバナナクリップ2 Black",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191003-1/",
+      "price": "4,860円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066722854.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
+      "name": "【楽天スーパーセール◎送料無料】トロピカルフラワー バナナクリップ Yellow",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191007-1/",
+      "price": "4,320円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066901840.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
+      "name": "【楽天スーパーセール◎送料無料】トロピカルフラワー バナナクリップ Pink",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191007-2/",
+      "price": "4,320円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066901861.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
+      "name": "【楽天スーパーセール◎送料無料】トロピカルフラワー バナナクリップ Blue",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191007-3/",
+      "price": "4,320円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066905373.jpg?_ex=200x200&s=0&r=1"
+    }
+  ],
+  "version": 1557770692
 }
