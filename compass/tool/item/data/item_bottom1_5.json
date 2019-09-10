@@ -24,6 +24,18 @@
   "item_price_font_size": "11",
   "items": [
     {
+      "name": "【楽天スーパーセール◎送料無料】パトリシアサテンバナナクリップ レース　（野山千鶴さんコラボ） Beige",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191004-1/",
+      "price": "5,400円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066761575.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
+      "name": "【楽天スーパーセール◎送料無料】パトリシアサテンバナナクリップ レース　（野山千鶴さんコラボ） Navy",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191004-2/",
+      "price": "5,400円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066761726.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
       "name": "【楽天スーパーセール◎送料無料】レースリボンバナナクリップ （野山千鶴さんコラボ） White",
       "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191005-1/",
       "price": "4,914円",
@@ -40,18 +52,6 @@
       "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191012-3/",
       "price": "4,104円",
       "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066977885.jpg?_ex=200x200&s=0&r=1"
-    },
-    {
-      "name": "【楽天スーパーセール◎送料無料】ストーンビーズバンスクリップ Ivory",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191012-1/",
-      "price": "4,104円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066977842.jpg?_ex=200x200&s=0&r=1"
-    },
-    {
-      "name": "【楽天スーパーセール◎送料無料】ストーンビーズバンスクリップ Brown",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191012-2/",
-      "price": "4,104円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066977858.jpg?_ex=200x200&s=0&r=1"
     }
   ],
   "version": 1557770692
