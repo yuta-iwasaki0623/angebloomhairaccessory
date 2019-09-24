@@ -24,34 +24,34 @@
   "item_price_font_size": "11",
   "items": [
     {
-      "name": "ストーンビーズバンスクリップ Brown",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191012-2/",
-      "price": "4,104円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066977858.jpg?_ex=200x200&s=0&r=1"
-    },
-    {
-      "name": "グレースサテン バナナクリップ Gray",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/171401b-1/",
-      "price": "4,914円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066856514.jpg?_ex=200x200&s=0&r=1"
-    },
-    {
-      "name": "グレースサテン バナナクリップ D.Brown",
+      "name": "グレースサテンバナナクリップ D.Brown",
       "url": "https://item.rakuten.co.jp/angebloomhairaccessory/171401b-12/",
       "price": "4,914円",
       "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/06359512/132138326.jpg?_ex=200x200&s=0&r=1"
     },
     {
-      "name": "シースルーリボンバナナクリップ　Navy",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191001-1/",
-      "price": "4,914円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066620997.jpg?_ex=200x200&s=0&r=1"
+      "name": "インディゴフリンジバナナクリップ　Blue (9thアニバーサリー）",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/182046-1/",
+      "price": "5,400円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066587692.jpg?_ex=200x200&s=0&r=1"
     },
     {
-      "name": "トリコカラーヘアゴム Navy",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/181017-5/",
-      "price": "2,700円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/compass1544057833.jpg?_ex=200x200&s=0&r=1"
+      "name": "メタルプレートヘアゴム Purple",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/162027-1/",
+      "price": "1,728円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/compass1550118254.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
+      "name": "Petitカラーフラワーヘアゴム Green",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/192010-1/",
+      "price": "1,944円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0067013632.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
+      "name": "Petitカラーフラワーヘアゴム Navy",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/192010-2/",
+      "price": "1,944円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0067013844.jpg?_ex=200x200&s=0&r=1"
     }
   ],
   "version": 1557770692
