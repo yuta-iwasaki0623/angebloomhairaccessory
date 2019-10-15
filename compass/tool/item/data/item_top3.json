@@ -24,6 +24,12 @@
   "item_price_font_size": "11",
   "items": [
     {
+      "name": "レオパードチュールバナナクリップ Beige",
+      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/1920013-1/",
+      "price": "5,500円",
+      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0067060410.jpg?_ex=200x200&s=0&r=1"
+    },
+    {
       "name": "レースリボンバナナクリップ （野山千鶴さんコラボ） Black",
       "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191005-2/",
       "price": "5,005円",
@@ -34,12 +40,6 @@
       "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191004-1/",
       "price": "5,500円",
       "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066761575.jpg?_ex=200x200&s=0&r=1"
-    },
-    {
-      "name": "パトリシアサテンバナナクリップ レース （野山千鶴さんコラボ） Navy",
-      "url": "https://item.rakuten.co.jp/angebloomhairaccessory/191004-2/",
-      "price": "5,500円",
-      "image": "https://thumbnail.image.rakuten.co.jp/@0_mall/angebloomhairaccessory/cabinet/imgrc0066761724.jpg?_ex=200x200&s=0&r=1"
     }
   ],
   "version": 1557770691
