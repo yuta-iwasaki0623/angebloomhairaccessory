@@ -512,6 +512,7 @@ h1 img {
 #event .event_slideBanner {
   padding: 0 8px;
 }
+
 #event .event_bannerWrapper li {
   margin: 8px;
 }
@@ -900,6 +901,7 @@ input[type=text] {
 --------------------------------------*/
 .event_bannerWrapper {
   margin: 16px 0;
+  padding: 0 8px;
 }
 
 /* カテゴリーから探す
@@ -977,6 +979,28 @@ input[type=text] {
  *------------------------------------*/
 .mb-1 {
   margin-bottom: 10px;
+}
+
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.d-block {
+  display: block;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content:space-between;
 }
 
 /*------------------------------------*
