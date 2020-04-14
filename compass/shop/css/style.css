@@ -1462,3 +1462,29 @@ h3, h4 {
 #item-bottom .banner-box .slidebanner {
   background: none;
 }
+
+.mb-1 {
+  margin-bottom: 10px;
+}
+
+.m-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.d-block {
+  display: block;
+}
+
+.w-90 {
+  width: 90%;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.flex-space-between {
+  display: flex;
+  justify-content:space-between;
+}
