@@ -28,7 +28,7 @@ body {
   font-size: 12px;
   color: #333;
   margin: 0px;
-  padding: 36px 0 0;
+  padding: 73px 0 0;
   background: #fff;
   z-index: -100;
   height: 1px;
@@ -215,7 +215,10 @@ input[type="text"]::-webkit-input-placeholder {
 /* ヘッダーナビ
 --------------------------------------*/
 #headNav {
-  width: 100%;
+  padding: 10px 0;
+  display: flex;
+  justify-content: space-between;;
+  width: 100%;;
   position: fixed;
   top: 0;
   left: 0;
@@ -223,6 +226,7 @@ input[type="text"]::-webkit-input-placeholder {
   box-shadow: 0 1px 1px rgba(85, 85, 85, 0.1);
   background: #fff;
   font-size: 14px;
+  z-index: 1;
 }
 #headNav .drawer-toggle {
   background: none;
@@ -234,7 +238,7 @@ input[type="text"]::-webkit-input-placeholder {
 }
 #headNav .drawer-toggle .fa {
   display: block;
-  font-size: 16px;
+  font-size: 20px;
 }
 #headNav ul {
   margin: 8px 8px 0;
@@ -247,7 +251,7 @@ input[type="text"]::-webkit-input-placeholder {
   display: block;
   width: 32px;
   height: 32px;
-  font-size: 18px;
+  font-size: 20px;
 }
 #headNav ul li .fa {
   width: 24px;
@@ -272,6 +276,11 @@ input[type="text"]::-webkit-input-placeholder {
   margin-bottom: 3px;
   background: url("../img/icon_rakuten.png");
   background-size: 100%;
+}
+
+.headNav__logo {
+  max-width: 80px;
+  align-self: flex-start;
 }
 
 /* 看板画像
@@ -362,7 +371,7 @@ h1 img {
 #searchBox.section {
   background: #fff;
   padding: 8px;
-  margin: 24px 0;
+  margin: 24px 0px 0px;
 }
 #searchBox.section .searchBox_input {
   margin-bottom: 8px;
@@ -856,14 +865,14 @@ input[type=text] {
     $ Components
  *------------------------------------*/
 #headNav {
-  background: #333;
-  color: #fff;
+  background: rgb(241, 230, 223);
+  color: rgb(79, 70, 75);
   margin: 0;
 }
 #headNav .drawer-toggle {
-  color: #fff;
   border: none;
   box-shadow: none;
+  color: rgb(79, 70, 75);
   padding: 0;
   margin: 12px 12px 0;
 }
@@ -903,7 +912,6 @@ input[type=text] {
   margin: 16px 0;
   padding: 0 8px;
 }
-
 /* カテゴリーから探す
 --------------------------------------*/
 #category {
@@ -945,8 +953,8 @@ input[type=text] {
 /* フッター
 --------------------------------------*/
 #footer {
-  background: #000;
-  color: #fff;
+  background: rgb(241, 230, 223);
+  color: rgb(79, 70, 75);
 }
 
 /* ドロワーナビゲーション
@@ -1006,3 +1014,15 @@ input[type=text] {
 /*------------------------------------*
     $ Style trumps
  *------------------------------------*/
+
+/*------------------------------------*
+    $ slick slider
+ *------------------------------------*/
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev {
+  left: 10px;
+  z-index: 1;
+}

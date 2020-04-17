@@ -11,6 +11,8 @@
   <meta http-equiv="Content-Style-Type" content="text/css">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="cache-control" content="no-cache">
+  <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
   <link href="css/sp_style.css?2020_03" type="text/css" media="all" rel="stylesheet">
   <link href="css/drawer.min.css" rel="stylesheet" type="text/css" />
   <script src="js/jquery-3.2.1.min.js"></script>
@@ -38,19 +40,19 @@
       });
 
       // 上スクロールでナビ出現
-      var menuHeight = $("#headNav").height();
-      var startPos = 0;
-      $(window).scroll(function () {
-        var currentPos = $(this).scrollTop();
-        if (currentPos > startPos) {
-          if ($(window).scrollTop() >= 200) {
-            $("#headNav").css("top", "-" + menuHeight + "px");
-          }
-        } else {
-          $("#headNav").css("top", 0 + "px");
-        }
-        startPos = currentPos;
-      });
+      // var menuHeight = $("#headNav").height();
+      // var startPos = 0;
+      // $(window).scroll(function () {
+      //   var currentPos = $(this).scrollTop();
+      //   if (currentPos > startPos) {
+      //     if ($(window).scrollTop() >= 200) {
+      //       $("#headNav").css("top", "-" + menuHeight + "px");
+      //     }
+      //   } else {
+      //     $("#headNav").css("top", 0 + "px");
+      //   }
+      //   startPos = currentPos;
+      // });
     });;
     (function ($) {
       $.fn.accordion = function (options) {
@@ -153,8 +155,10 @@
     <button type="button" class="drawer-toggle">
       <i class="fa fa-bars" aria-hidden="true"></i><span class="text-size-micro">メニュー</span>
     </button>
+
+    <img src="img/logo.png" alt="アンジェブルーム ヘアアクセサリー" class="headNav__logo">
     <!-- その他のナビ -->
-    <ul class="pull-right">
+    <ul>
       <li class="headNav_cart">
         <a href="https://sp.basket.step.rakuten.co.jp/rms/mall/bss/cartall/">
           <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="text-size-micro">カート</span>
@@ -162,43 +166,7 @@
       </li>
     </ul>
   </header>
-  <a href='https://event.rakuten.co.jp/campaign/cashless/' target='_blank' style="padding-top: 16px"><img
-      class="w-90 d-block m-auto"
-      src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/616x120.jpg' /></a>
-  <img src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/io/imgrc0067823481.jpg'
-    alt="アンジェブルーム ヘアアクセサリー" />
-  <!-- TOPバナー -->
-  <ul class="event_bannerWrapper">
-    <li class='header mb-1'><a href="https://www.rakuten.co.jp/angebloomhairaccessory/info.html"><img
-          src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/imgrc0067945461.jpg' alt="送料無料" /></a>
-    </li>
-    <li class='header mb-1'><a
-        href='https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000132/'
-        target='_blank'><img alt="コラボ商品"
-          src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/imgrc0067945993.jpg' /></a></li>
-  </ul>
-  <!-- <ul class="event_bannerWrapper flex-space-between">
-    <li class='header'>
-      <a href=''
-        target='_blank'>
-        <img class="w-90 d-block m-auto"
-          src='' /></a></li>
-  </ul> -->
-  <ul class="event_bannerWrapper">
-    <li class='header mb-1'><a href='https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000104/'
-        target='_blank'><img
-          src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/io/imgrc0066547954.jpg' /></a></li>
-    <li class='header mb-1'><a href='https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000107/'
-        target='_blank'><img alt="タイムセール"
-          src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/imgrc0067549339.jpg' /></a></li>
-  </ul>
-  <!-- <div id="test">
-  </div> -->
-  <!-- 売れ筋トップ3 -->
-  <div id="itemRanking3" class="section">
-    <ul class="ranking_wrapper">
-    </ul>
-  </div>
+  <div id="react-root"></div>
   <!-- 検索まど -->
   <div id="searchBox" class="section">
     <div class="searchBox_input">
@@ -208,14 +176,34 @@
         <div class="search-button"><input type="submit" value="検索"></div>
       </form>
     </div>
-    <ul class="searchBox_keyword">
-      <li><a href='https://item.rakuten.co.jp/angebloomhairaccessory/192015-1/' target='_top'>BEST SELLER</a></li>
-      <li><a href='https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000132/' target='_top'>@chichan01117コラボ商品</a>
-      </li>
-      <li><a href='https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000102/' target='_top'>新商品</a></li>
-      <li><a href='https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000107/' target='_top'>SALE</a></li>
+  </div>
+  <!-- <a href='https://event.rakuten.co.jp/campaign/cashless/' target='_blank' style="padding-top: 16px"><img
+      class="w-90 d-block m-auto"
+      src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/616x120.jpg' /></a> -->
+  <!-- TOPバナー -->
+  <!-- <ul class="event_bannerWrapper flex-space-between">
+    <li class='header'>
+      <a href=''
+        target='_blank'>
+        <img class="w-90 d-block m-auto"
+          src='' /></a></li>
+  </ul> -->
+  <!-- 売れ筋トップ3 -->
+  <div id="itemRanking3" class="section">
+    <ul class="ranking_wrapper">
     </ul>
   </div>
+  <!-- <ul class="event_bannerWrapper">
+    <li class='header mb-1'><a href="https://www.rakuten.co.jp/angebloomhairaccessory/info.html"><img
+      src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/imgrc0067945461.jpg' alt="送料無料" /></a>
+    </li>
+    <li class='header mb-1'><a href='https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000104/'
+        target='_blank'><img
+          src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/io/imgrc0066547954.jpg' /></a></li>
+    <li class='header mb-1'><a href='https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000107/'
+        target='_blank'><img alt="タイムセール"
+          src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/imgrc0067549339.jpg' /></a></li>
+  </ul> -->
   <!-- おすすめ商品 -->
   <section id="itemRecommend" class="section">
     <h2>当店のおすすめ商品</h2>
@@ -498,7 +486,7 @@
     <a href="https://review.rakuten.co.jp/rd/0_361895_361895_0/">ショップのレビュー</a>
     <p class="caption">copyright. Ange Bloom ヘアアクセサリーショップ </p>
   </div>
-  <!-- <script src="js/bundle.js"></script> -->
+  <script src="js/bundle.js"></script>
 </body>
 
 </html>
