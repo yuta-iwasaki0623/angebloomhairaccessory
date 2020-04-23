@@ -35352,7 +35352,7 @@ var Search = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var style = {
-        "z-index": 0
+        "zIndex": 0
       };
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "searchBox",
