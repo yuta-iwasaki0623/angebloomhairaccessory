@@ -35445,8 +35445,13 @@ var SimpleSlider = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       date: _this.props.nowDate,
       imagesList: [{
+        publishDate: "2020/04/25 00:00",
+        publishEndDate: "2020/04/25 23:59",
+        href: "https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000135/",
+        src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/timesale_rakuten0425.jpg"
+      }, {
         publishDate: "2020/04/23",
-        publishEndDate: "2020/04/28 1:59",
+        publishEndDate: "2020/04/28 01:59",
         href: "",
         src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/marathon_0423.jpg"
       }, {
