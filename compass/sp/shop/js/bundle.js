@@ -35301,6 +35301,118 @@ module.exports = g;
 
 /***/ }),
 
+/***/ "./component/coupon.jsx":
+/*!******************************!*\
+  !*** ./component/coupon.jsx ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return SimpleSlider; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "../node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+function _createSuper(Derived) { return function () { var Super = _getPrototypeOf(Derived), result; if (_isNativeReflectConstruct()) { var NewTarget = _getPrototypeOf(this).constructor; result = Reflect.construct(Super, arguments, NewTarget); } else { result = Super.apply(this, arguments); } return _possibleConstructorReturn(this, result); }; }
+
+function _possibleConstructorReturn(self, call) { if (call && (_typeof(call) === "object" || typeof call === "function")) { return call; } return _assertThisInitialized(self); }
+
+function _assertThisInitialized(self) { if (self === void 0) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return self; }
+
+function _isNativeReflectConstruct() { if (typeof Reflect === "undefined" || !Reflect.construct) return false; if (Reflect.construct.sham) return false; if (typeof Proxy === "function") return true; try { Date.prototype.toString.call(Reflect.construct(Date, [], function () {})); return true; } catch (e) { return false; } }
+
+function _getPrototypeOf(o) { _getPrototypeOf = Object.setPrototypeOf ? Object.getPrototypeOf : function _getPrototypeOf(o) { return o.__proto__ || Object.getPrototypeOf(o); }; return _getPrototypeOf(o); }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function"); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, writable: true, configurable: true } }); if (superClass) _setPrototypeOf(subClass, superClass); }
+
+function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
+
+
+
+var SimpleSlider = /*#__PURE__*/function (_React$Component) {
+  _inherits(SimpleSlider, _React$Component);
+
+  var _super = _createSuper(SimpleSlider);
+
+  function SimpleSlider(props, context, updater) {
+    var _this;
+
+    _classCallCheck(this, SimpleSlider);
+
+    _this = _super.call(this, props, context, updater);
+    _this.state = {
+      date: _this.props.nowDate,
+      imagesList: [{
+        publishDate: "2020/04/20",
+        publishEndDate: "2020/04/28 01:59",
+        href: "https://coupon.rakuten.co.jp/getCoupon?getkey=VDdUWC1EUDRDLTJWQjAtV09XNw--&rt=",
+        src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/marathon_4buy_15off_.jpg"
+      }, {
+        publishDate: "2020/04/20",
+        publishEndDate: "2020/04/28 01:59",
+        href: "https://coupon.rakuten.co.jp/getCoupon?getkey=SlFNUi1CTVRBLURIRTYtNlpISw--&rt=",
+        src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/marathon_3buy_10off_.jpg"
+      }, {
+        publishDate: "2020/04/20",
+        publishEndDate: "2020/04/28 01:59",
+        href: "https://coupon.rakuten.co.jp/getCoupon?getkey=TVE1Si04V1laLVRNVTEtWEg4TQ--&rt=",
+        src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/marathon_2buy_5off_.jpg"
+      }]
+    };
+    return _this;
+  }
+
+  _createClass(SimpleSlider, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "event_bannerWrapper"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+        className: "header"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+        href: "https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000136/",
+        target: "_blank"
+      }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+        className: "w-90 d-block m-auto mb-1",
+        src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/imgrc0068028631.jpg"
+      })))), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+        className: "event_bannerWrapper flex-space-between"
+      }, this.state.imagesList.map(function (imageValue, i) {
+        if (_this2.props.nowDate >= Date.parse(imageValue.publishDate) && imageValue.publishEndDate === null || _this2.props.nowDate >= Date.parse(imageValue.publishDate) && _this2.props.nowDate <= Date.parse(imageValue.publishEndDate)) {
+          return [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+            className: "header",
+            key: i
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+            href: imageValue.href,
+            target: "_blank"
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
+            className: "w-90 d-block m-auto mb-1",
+            src: imageValue.src
+          })))];
+        } else {
+          return [];
+        }
+      })));
+    }
+  }]);
+
+  return SimpleSlider;
+}(react__WEBPACK_IMPORTED_MODULE_0___default.a.Component);
+
+
+
+/***/ }),
+
 /***/ "./component/search.jsx":
 /*!******************************!*\
   !*** ./component/search.jsx ***!
@@ -35352,7 +35464,7 @@ var Search = /*#__PURE__*/function (_React$Component) {
     key: "render",
     value: function render() {
       var style = {
-        "zIndex": 0
+        zIndex: 0
       };
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
         id: "searchBox",
@@ -35507,9 +35619,11 @@ var SimpleSlider = /*#__PURE__*/function (_React$Component) {
           return "";
         }
       };
-      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_1___default.a, settings, this.state.imagesList.map(function (imageValue) {
+      return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_slick__WEBPACK_IMPORTED_MODULE_1___default.a, settings, this.state.imagesList.map(function (imageValue, i) {
         if (_this2.props.nowDate >= Date.parse(imageValue.publishDate) && imageValue.publishEndDate === null || _this2.props.nowDate >= Date.parse(imageValue.publishDate) && _this2.props.nowDate <= Date.parse(imageValue.publishEndDate)) {
-          return [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
+          return [/*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+            key: i
+          }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("a", {
             href: imageValue.href
           }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("img", {
             src: imageValue.src
@@ -35543,6 +35657,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _component_slider__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./component/slider */ "./component/slider.jsx");
 /* harmony import */ var _component_search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./component/search */ "./component/search.jsx");
+/* harmony import */ var _component_coupon__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./component/coupon */ "./component/coupon.jsx");
 function _typeof(obj) { "@babel/helpers - typeof"; if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -35565,6 +35680,8 @@ function _inherits(subClass, superClass) { if (typeof superClass !== "function" 
 
 function _setPrototypeOf(o, p) { _setPrototypeOf = Object.setPrototypeOf || function _setPrototypeOf(o, p) { o.__proto__ = p; return o; }; return _setPrototypeOf(o, p); }
 
+
+ // import ModalWindow from "./component/modalwindow";
 
 
 
@@ -35605,7 +35722,9 @@ var App = /*#__PURE__*/function (_React$Component) {
     value: function render() {
       return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", null, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_slider__WEBPACK_IMPORTED_MODULE_2__["default"], {
         nowDate: this.state.date
-      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_search__WEBPACK_IMPORTED_MODULE_3__["default"], null));
+      }), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_search__WEBPACK_IMPORTED_MODULE_3__["default"], null), /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_component_coupon__WEBPACK_IMPORTED_MODULE_4__["default"], {
+        nowDate: this.state.date
+      }));
     }
   }]);
 
