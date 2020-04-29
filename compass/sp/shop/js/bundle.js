@@ -35677,12 +35677,12 @@ var ToppBanner = /*#__PURE__*/function (_React$Component) {
         href: "https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000136/",
         src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/imgrc0068028631.jpg"
       }, {
-        publishDate: "2020/04/01 00:00",
+        publishDate: "2020/05/01 00:00",
         publishEndDate: "2020/05/01 23:59",
         href: "https://event.rakuten.co.jp/campaign/point-up/wonderfulday/mamawari/",
         src: "https://image.rakuten.co.jp/com/img/rms/cabinet/recommend_new/img00021546.gif"
       }, {
-        publishDate: "2020/04/01 00:00",
+        publishDate: "2020/05/01 00:00",
         publishEndDate: "2020/05/01 23:59",
         href: "https://event.rakuten.co.jp/campaign/point-up/wonderfulday/",
         src: "https://kakunin.rakuten.ne.jp/public_access/ichiba/event/campaign/point-up/wonderfulday/20200401/616x120_3x.gif"
