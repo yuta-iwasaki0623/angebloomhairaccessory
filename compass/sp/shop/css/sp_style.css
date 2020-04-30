@@ -1,4 +1,5 @@
 @charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap');
 /* CSS Document */
 /*------------------------------------*
     $ CONTENTS
@@ -989,6 +990,14 @@ input[type=text] {
   margin-bottom: 10px;
 }
 
+.mb-2 {
+  margin-bottom: 20px;
+}
+
+.mb-3 {
+  margin-bottom: 30px;
+}
+
 .m-auto {
   margin-left: auto;
   margin-right: auto;
@@ -1009,6 +1018,32 @@ input[type=text] {
 .flex-space-between {
   display: flex;
   justify-content:space-between;
+}
+
+.news {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.news__title {
+  font-family: 'Playfair Display', serif;
+  padding-left: 6px;
+  font-size: 24px;
+  color: rgb(79, 70, 75);
+  border-bottom: 1px solid #e5e5e5;
+  line-height: 1.8;
+}
+
+.news__post_wrapper {
+  margin: 8px 0;
+  padding: 0 4px;
+  line-height: 1.8;
+}
+
+.news__post_title {
+  margin: 0 0 10px 0;
+  padding: 0 0 4px 0;
+  border-bottom: 1px solid #e5e5e5;
 }
 
 /*------------------------------------*
