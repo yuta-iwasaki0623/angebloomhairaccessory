@@ -43883,11 +43883,6 @@ var SimpleSlider = /*#__PURE__*/function (_React$Component) {
       }, {
         publishDate: "2020/04/20",
         publishEndDate: null,
-        href: "https://item.rakuten.co.jp/angebloomhairaccessory/192037-1/",
-        src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/ponyhook_750_700.jpg"
-      }, {
-        publishDate: "2020/04/20",
-        publishEndDate: null,
         href: "https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000104/",
         src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/reborn_750_700.jpg"
       }]
