@@ -43861,10 +43861,20 @@ var SimpleSlider = /*#__PURE__*/function (_React$Component) {
     _this.state = {
       date: _this.props.nowDate,
       imagesList: [{
-        publishDate: "2020/04/30 00:00",
-        publishEndDate: "2020/04/30 23:59",
-        href: "https://coupon.rakuten.co.jp/getCoupon?getkey=RlJEUi1RSFM4LVlINTQtQUJPNg--&rt=",
-        src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/imgrc0068044015.jpg"
+        publishDate: "2020/05/02/ 20:00",
+        publishEndDate: null,
+        href: "https://item.rakuten.co.jp/angebloomhairaccessory/201001/",
+        src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/imgrc0068056587.jpg"
+      }, {
+        publishDate: "2020/05/02/ 20:00",
+        publishEndDate: null,
+        href: "https://item.rakuten.co.jp/angebloomhairaccessory/201002/",
+        src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/see-though_750_700.jpg"
+      }, {
+        publishDate: "2020/04/20",
+        publishEndDate: null,
+        href: "https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000141/",
+        src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/mother_2_750_700.jpg"
       }, {
         publishDate: "2020/04/20",
         publishEndDate: null,
@@ -43873,18 +43883,8 @@ var SimpleSlider = /*#__PURE__*/function (_React$Component) {
       }, {
         publishDate: "2020/04/20",
         publishEndDate: null,
-        href: "https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000141/",
-        src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/mothersday200yen.jpg"
-      }, {
-        publishDate: "2020/04/20",
-        publishEndDate: null,
         href: "https://item.rakuten.co.jp/angebloomhairaccessory/192037-1/",
         src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/ponyhook_750_700.jpg"
-      }, {
-        publishDate: "2020/04/20",
-        publishEndDate: null,
-        href: "https://item.rakuten.co.jp/angebloomhairaccessory/192034-1/",
-        src: "https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/imgrc0067966971.jpg"
       }, {
         publishDate: "2020/04/20",
         publishEndDate: null,
