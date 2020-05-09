@@ -16,7 +16,7 @@
   <link rel="stylesheet" type="text/css"
     href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
   <link href="css/sp_style.css?2020_04" type="text/css" media="all" rel="stylesheet">
-  <link href="css/drawer.min.css" rel="stylesheet" type="text/css" />
+  <!-- <link href="css/drawer.min.css" rel="stylesheet" type="text/css" /> -->
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="https://use.fontawesome.com/099a7975eb.js"></script>
   <script src="js/drawer.js?1554796406"></script>
@@ -30,16 +30,6 @@
 
   <script type="text/javascript">
     $(document).ready(function () {
-      // ドロワーの起動
-      $('.drawer').drawer({
-        showOverlay: true
-      });
-
-      // 「カテゴリーから探す」の挙動
-      $(".main-category").accordion();
-      $(".sub-category").accordion({
-        "scroll_area": ".drawer-nav_wrapper"
-      });
 
     });;
     (function ($) {
@@ -138,22 +128,6 @@
     })(jQuery);
   </script>
   <!-- ヘッダーナビ -->
-  <header id="headNav">
-    <!-- ドロワーメニュートリガー -->
-    <button type="button" class="drawer-toggle">
-      <i class="fa fa-bars" aria-hidden="true"></i><span class="text-size-micro">メニュー</span>
-    </button>
-
-    <img src="img/logo.png" alt="アンジェブルーム ヘアアクセサリー" class="headNav__logo">
-    <!-- その他のナビ -->
-    <ul>
-      <li class="headNav_cart">
-        <a href="https://sp.basket.step.rakuten.co.jp/rms/mall/bss/cartall/">
-          <i class="fa fa-shopping-cart" aria-hidden="true"></i><span class="text-size-micro">カート</span>
-        </a>
-      </li>
-    </ul>
-  </header>
   <div id="react-root"></div>
   <!-- 売れ筋トップ3 -->
   <div id="itemRanking3" class="section">
@@ -322,119 +296,13 @@
     </ul>
 
   </section>
-  <!-- 「上へ」ナビゲーション -->
-  <div class="anchor_top">
-    <a href="#headNav" data-ajax=”false”></a>
-  </div>
-  <!-- ドロワーナビゲーション -->
-  <nav class="drawer-nav" role="navigation">
-    <div class="drawer-nav_wrapper">
-      <h1>Ange Bloom ヘアアクセサリーショップ</h1>
-      <!-- 検索まど -->
-      <h2>キーワードでさがす</h2>
-      <div id="searchBox" class="nav-section">
-        <div class="searchBox_input">
-          <form name="myForm" method="get" action="http://esearch.rakuten.co.jp/rms/sd/isearch/vc"
-            accept-charset="EUC-JP">
-            <input type="hidden" name="sid" value="361895">
-            <input type="text" name="sitem" id="sitem" placeholder="気になるキーワードで検索">
-            <label class="search-button"><input type="submit" value=""></label>
-          </form>
-        </div>
-      </div>
-      <!-- カテゴリーから探す -->
-      <h2>カテゴリーから探す</h2>
-      <div id="category" class="nav-section sub-category">
-        <ul class="category_itemWrapper">
-          <li class="category_item node1" data-node="1">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000102/">新商品</a>
-          </li>
-          <li class="category_item node1" data-node="1">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000101/">送料無料アイテム</a>
-          </li>
-          <li class="category_item node1" data-node="1">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000107/">SALE</a>
-          </li>
-          <li class="category_item node1" data-node="1">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000132/">インスタグラマーコラボアイテム</a>
-          </li>
-          <li class="category_item node1" data-node="1">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000103/">プチプラ</a>
-          </li>
-          <li class="category_item node1" data-node="1">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000119/">バナナクリップ</a>
-          </li>
-          <li class="category_item node2" data-node="2">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000104/">BEST SELLER</a>
-          </li>
-          <li class="category_item node2" data-node="2">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000105/">Basic item</a>
-          </li>
-          <li class="category_item node2" data-node="2">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000106/">シーズンitem</a>
-          </li>
-          <li class="category_item node2" data-node="2">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000123/">きれいめ</a>
-          </li>
-          <li class="category_item node2" data-node="2">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000124/">カジュアル</a>
-          </li>
-          <li class="category_item node1" data-node="1">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000108/">ミニバンスクリップ／クリップ</a>
-          </li>
-          <li class="category_item node1" data-node="1">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000109/">ヘアゴム</a>
-          </li>
-          <li class="category_item node1" data-node="1">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000117/">シュシュ</a>
-          </li>
-          <li class="category_item node1" data-node="1">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000111/">カチューシャ</a>
-          </li>
-          <li class="category_item node1" data-node="1">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000113/">バレッタ</a>
-          </li>
-          <li class="category_item node1" data-node="1">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000126/">アクセサリー</a>
-          </li>
-          <li class="category_item node2" data-node="2">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000114/">ピアス</a>
-          </li>
-          <li class="category_item node2" data-node="2">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000112/">イヤリング</a>
-          </li>
-          <li class="category_item node2" data-node="2">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000115/">ブレスレット</a>
-          </li>
-          <li class="category_item node2" data-node="2">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000116/">ネックレス</a>
-          </li>
-          <li class="category_item node1" data-node="1">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000110/">Goods</a>
-          </li>
-          <li class="category_item node1" data-node="1">
-            <a href="https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000118/">ギフト・プレゼント</a>
-          </li>
-
-        </ul>
-      </div>
-      <!-- お店の情報 -->
-      <h2>お買い物ガイド</h2>
-      <div id="shoppingGuide" class="nav-section">
-        <ul>
-          <li class="shoppingGuide_shopInfo"><a
-              href="http://www.rakuten.co.jp/angebloomhairaccessory/info.html">決済・配送について</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
   <!-- フッター -->
   <div id="footer" class="section">
     <a href="https://www.rakuten.co.jp/angebloomhairaccessory/info.html">会社概要</a>
     <a href="https://review.rakuten.co.jp/rd/0_361895_361895_0/">ショップのレビュー</a>
     <p class="caption">copyright. Ange Bloom ヘアアクセサリーショップ </p>
   </div>
-  <script src="js/bundle.js?20200504"></script>
+  <script src="js/bundle.js?20200509"></script>
 </body>
 
 </html>
