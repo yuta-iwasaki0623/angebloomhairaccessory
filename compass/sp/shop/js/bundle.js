@@ -67075,7 +67075,7 @@ var SimpleSlider = /*#__PURE__*/function (_React$Component) {
         autoplay: true,
         mobileFirst: true,
         autoplaySpeed: 2500,
-        speed: 3500,
+        speed: 2000,
         slidesToShow: 1,
         slidesToScroll: 1
       };
