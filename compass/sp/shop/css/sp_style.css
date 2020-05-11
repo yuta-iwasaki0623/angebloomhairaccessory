@@ -1081,3 +1081,7 @@ input[type=text] {
   left: 10px;
   z-index: 1;
 }
+
+.slick-initialized .slick-slide {
+  -webkit-transform:perspective(0);
+}

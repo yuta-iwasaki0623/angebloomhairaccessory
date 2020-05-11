@@ -11,12 +11,9 @@
   <meta http-equiv="Content-Style-Type" content="text/css">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="cache-control" content="no-cache">
-  <link rel="stylesheet" type="text/css" charset="UTF-8"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-  <link rel="stylesheet" type="text/css"
-    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+  <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
   <link href="css/sp_style.css?2020_04" type="text/css" media="all" rel="stylesheet">
-  <!-- <link href="css/drawer.min.css" rel="stylesheet" type="text/css" /> -->
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="https://use.fontawesome.com/099a7975eb.js"></script>
   <script src="js/drawer.js?1554796406"></script>
@@ -33,17 +30,6 @@
 
     });;
     (function ($) {
-      $.fn.accordion = function (options) {
-        var opts = $.extend({}, $.fn.accordion.defaults, options);
-        var id = this;
-        var list = this.find(".category_item");
-        list.map(function () {
-          var thisNode = Number($(this).attr("data-node"));
-          var nextNode = Number($(this).next().attr("data-node"));
-          if (thisNode < nextNode) {
-            $(this).addClass("parent");
-          }
-        });
         list.click(function (e) {
           var clickPosition = list.index(this);
           var activeHeight = 0;
@@ -302,7 +288,7 @@
     <a href="https://review.rakuten.co.jp/rd/0_361895_361895_0/">ショップのレビュー</a>
     <p class="caption">copyright. Ange Bloom ヘアアクセサリーショップ </p>
   </div>
-  <script src="js/bundle.js?0510_2"></script>
+  <script src="js/bundle.js?"></script>
 </body>
 
 </html>
