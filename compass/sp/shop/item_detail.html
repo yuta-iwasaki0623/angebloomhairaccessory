@@ -5,8 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
 </head>
-<body>
+<body style="overflow: hidden;">
   <div id="item_detail"></div>
   <script src="js/itemdetail.bundle.js"></script>
+  <script>
+    var sendHeight = function (){
+      var h = document.documentElement.scrollHeight;
+      parent.postMessage(h, "*");
+    }
+    setTimeout(sendHeight, 400);
+  </script>
 </body>
 </html>
