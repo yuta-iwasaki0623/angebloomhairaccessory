@@ -11,8 +11,10 @@
   <meta http-equiv="Content-Style-Type" content="text/css">
   <meta http-equiv="Pragma" content="no-cache">
   <meta http-equiv="cache-control" content="no-cache">
-  <link rel="stylesheet" type="text/css" charset="UTF-8" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
+  <link rel="stylesheet" type="text/css" charset="UTF-8"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick.min.css" />
+  <link rel="stylesheet" type="text/css"
+    href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.6.0/slick-theme.min.css" />
   <link href="css/sp_style.css?2020_04" type="text/css" media="all" rel="stylesheet">
   <script src="js/jquery-3.2.1.min.js"></script>
   <script src="https://use.fontawesome.com/099a7975eb.js"></script>
@@ -24,92 +26,6 @@
 </head>
 
 <body class="drawer drawer--left drawer-close">
-
-  <script type="text/javascript">
-    (function ($) {
-        list.click(function (e) {
-          var clickPosition = list.index(this);
-          var activeHeight = 0;
-          var thisNode = Number($(this).attr("data-node"));
-          var nextNode = Number($(this).next().attr("data-node"));
-
-          if (thisNode < nextNode) {
-            if ($(this).hasClass("active")) {
-              moveScroll($(this), activeHeight);
-              closeContents(thisNode);
-            } else if (list.hasClass("active")) {
-              if (list.index($(".active").eq(0)) < clickPosition) {
-                activeHeight = getActiveHeight(thisNode);
-              }
-              moveScroll($(this), activeHeight);
-              closeContents(thisNode);
-              openContents($(this), nextNode);
-            } else {
-              moveScroll($(this), activeHeight);
-              openContents($(this), nextNode);
-            }
-            return false;
-          }
-        });
-        var moveScroll = function (obj, activeHeight) {
-          if (opts.scroll_area) {
-            var scroll = $(opts.scroll_area).scrollTop() + obj.offset().top;
-            $(opts.scroll_area).animate({
-              scrollTop: scroll - activeHeight
-            }, opts.scroll_speed, "swing");
-          } else {
-            $("html, body").animate({
-              scrollTop: obj.offset().top - activeHeight
-            }, opts.scroll_speed, "swing");
-          }
-        }
-        var openContents = function (obj, node) {
-          obj.addClass("active");
-          for (var i = obj.index() + 1; i < list.length; i++) {
-            var thisNode = Number(list.eq(i).attr("data-node"));
-            if (node == thisNode) {
-              list.eq(i).addClass("open").slideDown(opts.slide_speed, 'swing');
-            } else if (node > thisNode) {
-              break;
-            }
-          }
-        }
-        var closeContents = function (node) {
-          list.map(function () {
-            var thisNode = Number($(this).attr("data-node"));
-            if (node < thisNode) {
-              $(this).removeClass("active open").slideUp(opts.slide_speed, 'swing');
-            } else if (node == thisNode) {
-              $(this).removeClass("active");
-            }
-          });
-        }
-        var getActiveHeight = function (node) {
-          var h = 0;
-          var colCount = 0;
-          id.find(".open").map(function () {
-            var thisNode = Number($(this).attr("data-node"));
-            if (node < thisNode) {
-              if (thisNode == 3) {
-                colCount++;
-                if ((colCount % 2) != 0) {
-                  h = h + $(this).outerHeight();
-                }
-              } else {
-                h = h + $(this).outerHeight();
-              }
-            }
-          });
-          return h;
-        }
-      }
-      $.fn.accordion.defaults = {
-        scroll_area: null,
-        slide_speed: 500,
-        scroll_speed: 1000
-      };
-    })(jQuery);
-  </script>
   <!-- ヘッダーナビ -->
   <div id="react-root"></div>
   <!-- 売れ筋トップ3 -->
@@ -137,42 +53,19 @@
         </a>
       </li>
       <!-- イベントバナー -->
-
-      <!-- <li class='header'><a href='https://coupon.rakuten.co.jp/getCoupon?getkey=Q1dNRS1NRkNOLURETFAtUFY3Mw--' target='_top'><img src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/ss_d777_616x120.gif'></a></li>
-		<li class='header'>
-		<a href='https://coupon.rakuten.co.jp/getCoupon?getkey=MlhFMC1XQjFLLUdPT1EtU0dQNg--' target='_top'>
-					<img src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/ss_p777_616x120.gif'></a></li>
-		<li class='header'>
-		<a href='https://coupon.rakuten.co.jp/getCoupon?getkey=UUtXRi1JRVA4LUM3UlItVkVaSQ--' target='_top'>
-					<img src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/ss_2000_616x120.gif'></a></li>
-		<li class='header'>
-		<a href='https://coupon.rakuten.co.jp/getCoupon?getkey=VTdLVi1BOFFGLUw0UkstSU9IQw--' target='_top'>
-					<img src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/ss_1000_616x120.gif'></a></li>
-		<li class='header'>
-		<a href='https://coupon.rakuten.co.jp/getCoupon?getkey=RUsyRi0xWU9ZLU9EQjctV0U4UQ--' target='_top'>
-					<img src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/ss_500_616x120.gif'></a></li>
-		<li class='header'>
-		<a href='https://coupon.rakuten.co.jp/getCoupon?getkey=QlpTWC1KOENHLVpTNVYtS0VWQQ--' target='_top'>
-					<img src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/ss_300_616x120.gif'></a></li>
-		<li class='header'>
-			<a href='https://coupon.rakuten.co.jp/getCoupon?getkey=Q1UyRi1YT0ZHLUpUR0wtQks3Mg--' target='_top'>
-					<img src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/ss_100_616x120.gif'></a></li> -->
       <!-- 正方形 -->
       <li class='left_navi'><a href='https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000132/'
           target='_blank'><img
-            src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/noyama_4rd_1040.jpg' /></a>
-      </li>
-      <li class='left_navi'><a href='https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000141/'
-          target='_blank'><img
-            src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/imgrc0068056809.jpg' /></a></li>
+            src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/noyama_4rd_1040.jpg' /></a></li>
       <li class='left_navi'><a href='https://item.rakuten.co.jp/angebloomhairaccessory/201001/' target='_blank'><img
             src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/patriciachiffon_1040.jpg' /></a></li>
       <li class='left_navi'><a href='https://item.rakuten.co.jp/angebloomhairaccessory/201002/' target='_blank'><img
             src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/banner/see-though_1040.jpg' /></a></li>
-      <!-- <li class='shop_top'><a href='https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000103/'
-          target='_blank'><img
-            src='https://image.rakuten.co.jp/angebloomhairaccessory/cabinet/imgrc0066585979.jpg' /></a></li> -->
-      <li class='shop_top'><a href='https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000107/'
+
+      <li class='left_navi'><a href='https://www.rakuten.ne.jp/gold/angebloomhairaccessory/compass/sp/shop/howto.html' target='_blank'><img
+            src='https://www.rakuten.ne.jp/gold/angebloomhairaccessory/compass/sp/shop/img/howto_main.jpg' /></a></li>
+
+            <li class='shop_top'><a href='https://item.rakuten.co.jp/angebloomhairaccessory/c/0000000107/'
           target='_blank'><img
             src='https://www.rakuten.ne.jp/gold/angebloomhairaccessory/compass/user_data/shop_banner/shop_top_1548396092.jpeg' /></a>
       </li>
