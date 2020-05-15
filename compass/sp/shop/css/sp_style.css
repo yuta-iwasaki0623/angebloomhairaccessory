@@ -1162,12 +1162,19 @@ input[type=text] {
 
 .news__title,
 .four_items__title {
-  font-family: 'Playfair Display', serif;
   padding-left: 6px;
   font-size: 24px;
   color: rgb(79, 70, 75);
   border-bottom: 1px solid #e5e5e5;
   line-height: 1.8;
+}
+
+.news__title{
+  font-family: 'Playfair Display', serif;
+}
+
+.four_items__title {
+  font-family: cursive;
 }
 
 .news__post_wrapper,
