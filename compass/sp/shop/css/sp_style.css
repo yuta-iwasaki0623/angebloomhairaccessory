@@ -1162,6 +1162,7 @@ input[type=text] {
 
 .news__title,
 .four_items__title {
+  font-family: 'Playfair Display', serif;
   padding-left: 6px;
   font-size: 24px;
   color: rgb(79, 70, 75);
@@ -1169,11 +1170,8 @@ input[type=text] {
   line-height: 1.8;
 }
 
-.news__title{
-  font-family: 'Playfair Display', serif;
-}
-
-.four_items__title {
+/* safari */
+_::-webkit-full-page-media, _:future, :root .four_items__title {
   font-family: cursive;
 }
 
