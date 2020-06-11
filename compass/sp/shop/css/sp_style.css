@@ -1325,6 +1325,9 @@ _::-webkit-full-page-media, _:future, :root .four_items__title {
   border-color: #eb9595;
 }
 
-.CarouselItem {
-  min-height: 354px;
+.CarouselItem img {
+  width: 100%;
+  max-width: 750px;
+  height: 100vw;
+  max-height: 700px;
 }
