@@ -1331,3 +1331,10 @@ _::-webkit-full-page-media, _:future, :root .four_items__title {
   height: 100vw;
   max-height: 700px;
 }
+
+.MuiTypography-h5	{
+  background: rgb(241, 230, 223);
+  box-shadow: 0px 0px 0px 5px rgb(241, 230, 223);
+  border: dashed 1px #fff;
+  padding: 0.2em 0.5em;
+}
